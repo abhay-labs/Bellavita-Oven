@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pineapple Cakes</title>
+
+    <link rel="stylesheet" href="../cake.css">
+
+    <link rel="stylesheet" href="pineapple.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <div id="mainContent">
+
+        <h1 class="title">Pineapple Cake Collection</h1>
+
+        <div class="cake-grid">
+
+            <div class="cake-card" data-id="pineapple1">
+                <img src="pineapple1.jpg" onclick="openPopup(this.src,'₹699','pineapple1')">
+                <div class="card-bottom">
+                    <div class="price">₹699</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="cake-card" data-id="pineapple2">
+                <img src="pineapple2.jpg" onclick="openPopup(this.src,'₹389','pineapple2')">
+                <div class="card-bottom">
+                    <div class="price">₹389</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="pineapple3">
+                <img src="pineapple3.jpg" onclick="openPopup(this.src,'₹520','pineapple3')">
+                <div class="card-bottom">
+                    <div class="price">₹520</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="pineapple4">
+                <img src="pineapple4.jpg" onclick="openPopup(this.src,'₹720','pineapple4')">
+                <div class="card-bottom">
+                    <div class="price">₹720</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="pineapple5">
+                <img src="pineapple5.jpg" onclick="openPopup(this.src,'₹645','pineapple5')">
+                <div class="card-bottom">
+                    <div class="price">₹645</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- AUTO GENERATED -->
+            <script>
+                let container = document.write.bind(document);
+
+                for (let i = 6; i <= 15; i++) {
+                    let price = Math.floor(Math.random() * (600 - 450 + 1)) + 450;
+
+                    container(`
+    <div class="cake-card" data-id="pineapple${i}">
+        <img src="pineapple${i}.jpg" onclick="openPopup(this.src,'₹${price}','pineapple${i}')">
+        <div class="card-bottom">
+            <div class="price">₹${price}</div>
+            <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+            <div class="qty-control">
+                <button onclick="decrease(this,event)">-</button>
+                <span class="qty">1</span>
+                <button onclick="increase(this,event)">+</button>
+            </div>
+        </div>
+    </div>
+    `);
+                }
+            </script>
+
+        </div>
+
+        <script src="../cake.js"></script>
+        <script src="pineapple.js"></script>
+
+
+        <div id="cakePopup" class="popup" data-id="">
+
+            <div class="popup-content">
+
+                <span class="close-popup" onclick="closePopup()">✕</span>
+
+                <img id="popupImg">
+
+                <div class="popup-bottom">
+
+                    <div id="popupPrice"></div>
+
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+
+                    <div class="qty-control">
+
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SIDE CART -->
+    <div id="sideCart" class="side-cart">
+
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <span onclick="closeCart()">✕</span>
+        </div>
+
+        <div id="sideCartItems"></div>
+
+        <div class="cart-footer">
+            <h3 id="cartTotal">Total: ₹0</h3>
+            <a href="/checkout/checkout.html">
+                <button class="checkout-btn">Checkout</button>
+            </a>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

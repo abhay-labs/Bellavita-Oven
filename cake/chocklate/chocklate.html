@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chocolate Cakes</title>
+
+    <link rel="stylesheet" href="../cake.css">
+
+    <link rel="stylesheet" href="chocklate.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <div id="mainContent">
+
+        <h1 class="title">Chocolate Cake Collection</h1>
+
+        <div class="cake-grid">
+
+            <div class="cake-card" data-id="cake1">
+
+                <img src="cake1.jpg" onclick="openPopup(this.src,'₹699','cake1')">
+
+                <div class="card-bottom">
+
+                    <div class="price">₹699</div>
+
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+
+                    <div class="qty-control">
+
+                        <button onclick="decrease(this,event)">-</button>
+
+                        <span class="qty">1</span>
+
+                        <button onclick="increase(this,event)">+</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="cake-card" data-id="cake2">
+                <img src="cake2.jpg" onclick="openPopup(this.src,'₹389','cake2')">
+                <div class="card-bottom">
+                    <div class="price">₹389</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake3">
+                <img src="cake3.jpg" onclick="openPopup(this.src,'₹520','cake3')">
+                <div class="card-bottom">
+                    <div class="price">₹520</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake4">
+                <img src="cake4.jpg" onclick="openPopup(this.src,'₹720','cake4')">
+                <div class="card-bottom">
+                    <div class="price">₹720</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake5">
+                <img src="cake5.jpg" onclick="openPopup(this.src,'₹645','cake5')">
+                <div class="card-bottom">
+                    <div class="price">₹645</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake6">
+                <img src="cake6.jpg" onclick="openPopup(this.src,'₹910' ,'cake6')">
+                <div class="card-bottom">
+                    <div class="price">₹910</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake7">
+                <img src="cake7.jpg" onclick="openPopup(this.src,'₹1321' ,'cake7')">
+                <div class="card-bottom">
+                    <div class="price">₹1321</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake8">
+                <img src="cake8.jpg" onclick="openPopup(this.src,'₹985','cake8')">
+                <div class="card-bottom">
+                    <div class="price">₹985</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake9">
+                <img src="cake9.jpg" onclick="openPopup(this.src,'₹409' ,'cake9')">
+                <div class="card-bottom">
+                    <div class="price">₹409</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake10">
+                <img src="cake10.jpg" onclick="openPopup(this.src,'₹1340' ,'cake10')">
+                <div class="card-bottom">
+                    <div class="price">₹1340</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake11">
+                <img src="cake11.jpg" onclick="openPopup(this.src,'₹1245' ,'cake11')">
+                <div class="card-bottom">
+                    <div class="price">₹1245</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake12">
+                <img src="cake12.jpg" onclick="openPopup(this.src,'₹610' ,'cake12')">
+                <div class="card-bottom">
+                    <div class="price">₹610</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake13">
+                <img src="cake13.jpg" onclick="openPopup(this.src,'₹530' ,'cake13')">
+                <div class="card-bottom">
+                    <div class="price">₹530</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake14">
+                <img src="cake14.jpg" onclick="openPopup(this.src,'₹852' ,'cake14')">
+                <div class="card-bottom">
+                    <div class="price">₹852</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake15">
+                <img src="cake15.jpg" onclick="openPopup(this.src,'₹638' ,'cake15')">
+                <div class="card-bottom">
+                    <div class="price">₹638</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake16">
+                <img src="cake16.jpg" onclick="openPopup(this.src,'₹542' ,'cake16')">
+                <div class="card-bottom">
+                    <div class="price">₹542</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake17">
+                <img src="cake17.jpg" onclick="openPopup(this.src,'₹1400' ,'cake17')">
+                <div class="card-bottom">
+                    <div class="price">₹1400</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake18">
+                <img src="cake18.jpg" onclick="openPopup(this.src,'₹480' ,'cake18')">
+                <div class="card-bottom">
+                    <div class="price">₹480</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake19">
+                <img src="cake19.jpg" onclick="openPopup(this.src,'₹652' ,'cake19')">
+                <div class="card-bottom">
+                    <div class="price">₹652</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake20">
+                <img src="cake20.jpg" onclick="openPopup(this.src,'₹650' ,'cake20')">
+                <div class="card-bottom">
+                    <div class="price">₹650</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake21">
+                <img src="cake21.jpg" onclick="openPopup(this.src,'₹1600' ,'cake21')">
+                <div class="card-bottom">
+                    <div class="price">₹1600</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake22">
+                <img src="cake22.jpg" onclick="openPopup(this.src,'₹1385' ,'cake22')">
+                <div class="card-bottom">
+                    <div class="price">₹1385</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake23">
+                <img src="cake23.jpg" onclick="openPopup(this.src,'₹1110' ,'cake23')">
+                <div class="card-bottom">
+                    <div class="price">₹1110</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake24">
+                <img src="cake24.jpg" onclick="openPopup(this.src,'₹999' ,'cake24')">
+                <div class="card-bottom">
+                    <div class="price">₹999</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake25">
+                <img src="cake25.jpg" onclick="openPopup(this.src,'₹1299' ,'cake25')">
+                <div class="card-bottom">
+                    <div class="price">₹1299</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake26">
+                <img src="cake26.jpg" onclick="openPopup(this.src,'₹799' ,'cake26')">
+                <div class="card-bottom">
+                    <div class="price">₹799</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake27">
+                <img src="cake27.jpg" onclick="openPopup(this.src,'₹859' ,'cake27')">
+                <div class="card-bottom">
+                    <div class="price">₹859</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake28">
+                <img src="cake28.jpg" onclick="openPopup(this.src,'₹799' ,'cake28')">
+                <div class="card-bottom">
+                    <div class="price">₹799</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake29">
+                <img src="cake29.jpg" onclick="openPopup(this.src,'₹1239' ,'cake29')">
+                <div class="card-bottom">
+                    <div class="price">₹1239</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake30">
+                <img src="cake30.jpg" onclick="openPopup(this.src,'₹1329' ,'cake30')">
+                <div class="card-bottom">
+                    <div class="price">₹1329</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-card" data-id="cake31">
+                <img src="cake31.jpg" onclick="openPopup(this.src,'₹1499' ,'cake31')">
+                <div class="card-bottom">
+                    <div class="price">₹1499</div>
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+                    <div class="qty-control">
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- AUTO GENERATED -->
+            <script>
+                let container = document.write.bind(document);
+
+                for (let i = 35; i <= 74; i++) {
+                    let price = Math.floor(Math.random() * (600 - 450 + 1)) + 450;
+
+                    container(`
+    <div class="cake-card" data-id="cake${i}">
+        <img src="cake${i}.jpg" onclick="openPopup(this.src,'₹${price}','cake${i}')">
+        <div class="card-bottom">
+            <div class="price">₹${price}</div>
+            <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+            <div class="qty-control">
+                <button onclick="decrease(this,event)">-</button>
+                <span class="qty">1</span>
+                <button onclick="increase(this,event)">+</button>
+            </div>
+        </div>
+    </div>
+    `);
+                }
+            </script>
+
+        </div>
+
+        <script src="../cake.js"></script>
+        <script src="chocklate.js"></script>
+
+
+        <div id="cakePopup" class="popup" data-id="">
+
+            <div class="popup-content">
+
+                <span class="close-popup" onclick="closePopup()">✕</span>
+
+                <img id="popupImg">
+
+                <div class="popup-bottom">
+
+                    <div id="popupPrice"></div>
+
+                    <div class="add-btn" onclick="addItem(this,event)">ADD +</div>
+
+                    <div class="qty-control">
+
+                        <button onclick="decrease(this,event)">-</button>
+                        <span class="qty">1</span>
+                        <button onclick="increase(this,event)">+</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SIDE CART -->
+    <div id="sideCart" class="side-cart">
+
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <span onclick="closeCart()">✕</span>
+        </div>
+
+        <div id="sideCartItems"></div>
+
+        <div class="cart-footer">
+            <h3 id="cartTotal">Total: ₹0</h3>
+            <a href="/checkout/checkout.html">
+                <button class="checkout-btn">Checkout</button>
+            </a>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

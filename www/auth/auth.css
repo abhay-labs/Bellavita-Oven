@@ -1,0 +1,696 @@
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 18px;
+  box-shadow: 0 0 40px rgba(0, 153, 255, 0.35);
+}
+
+.auth-card {
+  width: 380px;
+  padding: 30px;
+  color: white;
+  text-align: center;
+}
+
+.auth-title {
+  margin-bottom: 5px;
+}
+
+.auth-sub {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin: 14px 0;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.input-group i {
+  margin-right: 10px;
+  opacity: 0.8;
+}
+
+.input-group input {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  width: 100%;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #7a00ff, #00b3ff);
+  color: white;
+  cursor: pointer;
+}
+
+.btn-google {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #fff;
+  color: #000;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.divider {
+  margin: 15px 0;
+  opacity: 0.6;
+}
+
+.switch {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.switch a {
+  color: #6fdcff;
+  text-decoration: none;
+}
+
+.btn-logout {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background: #ff3b3b;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+
+
+.back-arrow {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.back-arrow:hover {
+  color: #ffffff;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.back-arrow:hover {
+  color: #ffffff;
+}
+
+
+.resend-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.resend-btn {
+  margin-top: 8px;
+  background: transparent;
+  border: none;
+  color: #6a8cff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.resend-btn:disabled {
+  color: #555;
+  cursor: not-allowed;
+}
+
+.password-hint {
+  font-size: 12px;
+  color: #b0b0b0;
+
+  /* 🔹 position tuning */
+  margin-top: -6px;
+  /* thoda upar */
+  margin-left: 6px;
+  /* left side shift */
+
+  text-align: left;
+}
+
+.error-text {
+  margin-top: -6px;
+  margin-left: 6px;
+  font-size: 12px;
+  color: #e74c3c;
+  /* professional red */
+  display: none;
+  /* default hidden */
+}
+
+.error-text {
+  display: none;
+  color: #e74c3c;
+  /* red */
+  font-size: 13px;
+  margin-top: -6px;
+  margin-bottom: 12px;
+
+  text-align: left;
+  /* ✅ LEFT ALIGN */
+  padding-left: 6px;
+  /* ✅ thoda left shift */
+}
+
+.error-text {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: -6px;
+  margin-left: 6px;
+  display: none;
+}
+
+.success-text {
+  color: #28a745;
+  /* green */
+  font-size: 13px;
+  margin-top: 6px;
+  text-align: left;
+  display: none;
+}
+
+.success-text {
+  color: #2ecc71;
+  font-size: 13px;
+  margin-top: 6px;
+  text-align: left;
+}
+
+.success-msg {
+  display: none;
+  color: #2ecc71;
+  /* green */
+  font-size: 13px;
+  margin-top: -8px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.error-text {
+  color: #ff4d4f;
+  font-size: 13px;
+  margin-top: 4px;
+  text-align: left;
+  display: none;
+}
+
+.corner-error {
+  position: absolute;
+  top: 1px;
+  left: 10px;
+  /* back arrow ke thoda right */
+  color: #e53935;
+  /* red */
+  font-size: 12px;
+  display: none;
+}
+
+.corner-error {
+  position: absolute;
+  top: 1px;
+  left: 12px;
+  color: #e53935;
+  font-size: 12px;
+  display: none;
+}
+
+/* 🔴 Corner Error Message (Top-Left, near back arrow) */
+.corner-error {
+  position: absolute;
+  top: 1px;
+  /* back arrow ke paas */
+  left: 12px;
+  /* arrow ke thoda right */
+
+  color: #ff4d4f;
+  /* professional red */
+  font-size: 13px;
+  font-weight: 500;
+
+  display: none;
+  /* JS se control hoga */
+  white-space: nowrap;
+
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ✨ Smooth appearance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔴 Only Email Required Error (slightly right) */
+.corner-error.email-only {
+  left: 340px;
+  /* pehle 48px tha, ab thoda right */
+  top: 2px;
+}
+
+/* 🔴 Reset Password only (slightly right aligned) */
+.corner-error.reset-only {
+  left: 300px;
+  /* 👉 yahin se right adjust ho raha hai */
+  top: 2px;
+}
+
+/* 🔴 Wrong OTP error (below OTP input) */
+.otp-error {
+  color: #ff4d4f;
+  font-size: 13px;
+  margin-top: 6px;
+  margin-left: -6px;
+  /* 👈 thoda left */
+  display: none;
+}
+
+
+/* 🔴 Wrong OTP error (below OTP input) */
+.otp-error {
+  color: #ff4d4f;
+  font-size: 13px;
+  margin-top: 6px;
+  margin-left: -6px;
+  /* 👈 thoda left */
+  display: none;
+}
+
+
+.error-text {
+  display: none;
+  color: #ff4d4f;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+
+
+.auth-body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 🍓 Bakery Gradient Background */
+  background: radial-gradient(circle at top, #ff4d6d, #ffb3c6, #ffe5ec);
+
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 🍰 Glass Card */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+
+  box-shadow:
+    0 15px 40px rgba(255, 0, 80, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Login Card */
+.auth-card {
+  width: 380px;
+  padding: 35px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Title */
+.auth-title {
+  margin-bottom: 5px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Subtitle */
+.auth-sub {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* Input Box */
+.input-group {
+  display: flex;
+  align-items: center;
+  margin: 14px 0;
+
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+/* Input Icon */
+.input-group i {
+  margin-right: 10px;
+  color: #ff2e63;
+}
+
+/* Input Field */
+.input-group input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* 🍓 Login Button */
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 12px;
+  border: none;
+
+  background: linear-gradient(135deg, #ff2e63, #ff6b81);
+
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 46, 99, 0.4);
+}
+
+/* Google Button */
+.btn-google {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: #ffffff;
+  color: #000;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Divider */
+.divider {
+  margin: 15px 0;
+  opacity: 0.7;
+}
+
+/* Switch login/signup */
+.switch {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.switch a {
+  color: #ff2e63;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Logout Button */
+.btn-logout {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background: #ff3b3b;
+  border: none;
+  border-radius: 12px;
+  color: white;
+}
+
+/* Back Arrow */
+.back-arrow {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.back-arrow:hover {
+  color: #ff2e63;
+}
+
+/* Password hint */
+.password-hint {
+  font-size: 12px;
+  color: #ffe5ec;
+  margin-top: -6px;
+  margin-left: 6px;
+  text-align: left;
+}
+
+/* Error Text */
+.error-text {
+  color: #ff1744;
+  font-size: 13px;
+  margin-top: 4px;
+  text-align: left;
+  display: none;
+}
+
+/* Success Text */
+.success-msg {
+  display: none;
+  color: #00e676;
+  font-size: 13px;
+  margin-top: -8px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+/* 🍰 Floating Bakery Icons */
+/* 🍰 Floating Bakery Icons - Bigger & Darker */
+
+.bakery-bg span {
+  position: absolute;
+
+  font-size: 48px;
+  /* 👈 size bada */
+  opacity: 0.55;
+  /* 👈 darker */
+
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+  /* depth */
+
+  animation: floatCake 14s linear infinite;
+}
+
+/* positions */
+.bakery-bg span:nth-child(1) {
+  left: 8%;
+  top: 85%;
+  animation-delay: 0s;
+}
+
+.bakery-bg span:nth-child(2) {
+  left: 22%;
+  top: 92%;
+  animation-delay: 3s;
+}
+
+.bakery-bg span:nth-child(3) {
+  left: 45%;
+  top: 88%;
+  animation-delay: 6s;
+}
+
+.bakery-bg span:nth-child(4) {
+  left: 68%;
+  top: 95%;
+  animation-delay: 9s;
+}
+
+.bakery-bg span:nth-child(5) {
+  left: 85%;
+  top: 90%;
+  animation-delay: 12s;
+}
+
+@keyframes floatCake {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateY(-130vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+/* 🍓 Cake Decoration on Card */
+.glass::before {
+  content: "🍰";
+  position: absolute;
+  font-size: 40px;
+  top: -20px;
+  right: -15px;
+  opacity: 0.9;
+  animation: cakeBounce 3s infinite;
+}
+
+@keyframes cakeBounce {
+  0% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(-6px)
+  }
+
+  100% {
+    transform: translateY(0)
+  }
+}
+
+
+
+
+/* ======================================
+   🌍 Intl Tel Input – ALPHA Premium Theme
+   ====================================== */
+
+/* Dropdown container */
+.iti__country-list {
+  background: linear-gradient(180deg,
+      #0b0218,
+      #140028);
+  backdrop-filter: blur(18px);
+  border-radius: 16px;
+  border: 1px solid rgba(170, 90, 255, 0.35);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.85),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  margin-top: 10px;
+  padding: 6px 0;
+  color: #ffffff;
+  max-height: 280px;
+}
+
+/* Each country row */
+.iti__country {
+  padding: 11px 16px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+/* Hover */
+.iti__country:hover {
+  background: linear-gradient(90deg,
+      rgba(122, 0, 255, 0.35),
+      rgba(0, 179, 255, 0.18));
+}
+
+/* Active / Selected country */
+.iti__country.iti__highlight {
+  background: linear-gradient(90deg,
+      rgba(122, 0, 255, 0.55),
+      rgba(0, 179, 255, 0.35));
+  box-shadow: inset 3px 0 0 #9d4dff;
+}
+
+/* Country name */
+.iti__country-name {
+  color: #f5ecff;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* Dial code */
+.iti__dial-code {
+  margin-left: auto;
+  color: #caa8ff;
+  font-size: 12px;
+}
+
+/* Flag icon container */
+.iti__flag-box {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Divider line */
+.iti__divider {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 6px 0;
+}
+
+/* Scrollbar */
+.iti__country-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.iti__country-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8a2cff, #00b3ff);
+  border-radius: 10px;
+}
+
+/* Selected flag (input side) */
+.phone-group .iti__selected-flag {
+  background: rgba(122, 0, 255, 0.25);
+  border-radius: 10px;
+  padding: 5px 9px;
+  transition: background 0.2s ease;
+}
+
+.phone-group .iti__selected-flag:hover {
+  background: rgba(122, 0, 255, 0.4);
+}
+
+/* Input text */
+.phone-group input {
+  color: #ffffff;
+}
+
+/* Placeholder */
+.phone-group input::placeholder {
+  color: rgba(200, 180, 255, 0.45);
+}
+
+/* 📞 Space between country code and number */
+.phone-group .iti__tel-input {
+  padding-left: 110px !important;
+}

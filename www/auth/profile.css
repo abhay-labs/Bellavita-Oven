@@ -1,0 +1,311 @@
+/* ===== FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ================= ROOT ================= */
+body.alpha-bg {
+    min-height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle at top,
+            #fff5f7 0%,
+            #ffe4e9 45%,
+            #ffd6dc 100%);
+    color: #4a2c2a;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ================= BACK BUTTON ================= */
+.back-btn {
+    position: fixed;
+    top: 22px;
+    left: 22px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 105, 135, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.back-btn i {
+    color: #ff6f91;
+    font-size: 20px;
+}
+
+.back-btn:hover {
+    box-shadow: 0 0 15px rgba(255, 105, 135, 0.6);
+}
+
+/* ================= PAGE WRAPPER ================= */
+.profile-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100vh;
+    padding: 80px 40px;
+}
+
+/* ================= PROFILE CARD ================= */
+.profile-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    max-width: 1100px;
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(25px);
+    box-shadow: 0 10px 50px rgba(255, 105, 135, 0.2);
+}
+
+/* ================= LEFT PANEL ================= */
+.profile-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 320px;
+    background: linear-gradient(180deg,
+            #ffd6e0 0%,
+            #ffb3c6 60%,
+            #ff8fab 100%);
+    z-index: 0;
+}
+
+/* ================= HEADER ================= */
+.profile-header {
+    position: relative;
+    z-index: 2;
+    padding: 180px 25px 20px;
+    text-align: center;
+    transform: translateX(-40px);
+}
+
+.alpha-logo {
+    width: 72px;
+    margin-bottom: 18px;
+    filter: drop-shadow(0 0 18px rgba(255, 105, 135, 0.7));
+}
+
+.profile-header h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.profile-header p {
+    margin-top: 6px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ================= AVATAR (PREMIUM FIX) ================= */.avatar-section {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 10px 0 35px;
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 3px;
+
+    /* 🔥 Premium gradient ring */
+    background: linear-gradient(135deg, #cb8999, #eb7ea6, #e26282);
+
+    /* glow */
+    box-shadow:
+        0 0 25px rgba(255, 105, 135, 0.5),
+        0 0 60px rgba(255, 105, 135, 0.2);
+
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+/* inner image */
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+
+    /* smooth zoom feel */
+    transition: transform 0.4s ease;
+}
+
+/* hover effect */
+.avatar-wrapper:hover {
+    transform: scale(1.06);
+    box-shadow:
+        0 0 35px rgba(255, 105, 135, 0.7),
+        0 0 80px rgba(255, 105, 135, 0.3);
+}
+
+.avatar-wrapper:hover img {
+    transform: scale(1.08);
+}
+
+/* overlay effect (dark fade on hover) */
+.avatar-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.avatar-wrapper:hover::after {
+    opacity: 1;
+}
+
+/* camera button */
+.camera-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #ff6f91, #ff8fab);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+
+    box-shadow: 0 4px 15px rgba(255, 105, 135, 0.6);
+
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.camera-icon:hover {
+    transform: scale(1.15);
+}
+
+/* ================= FORM ================= */
+#profileForm {
+    position: relative;
+    z-index: 2;
+    padding: 45px 55px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ================= LABEL ================= */
+label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #4a2c2a;
+}
+
+/* ================= INPUT ================= */
+.form-control.neon {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 105, 135, 0.3);
+    color: #4a2c2a;
+    border-radius: 14px;
+    padding: 11px 14px;
+    transition: 0.3s;
+}
+
+.form-control.neon::placeholder {
+    color: rgba(74, 44, 42, 0.5);
+}
+
+.form-control.neon:focus {
+    border-color: #ff6f91;
+    box-shadow: 0 0 15px rgba(255, 105, 135, 0.5);
+}
+
+/* ================= LOCKED ================= */
+.form-control.locked {
+    background: #fff0f2;
+    color: #4a2c2a !important;
+}
+
+/* ================= BUTTONS ================= */
+.save-btn {
+    margin-top: 40px;
+    padding: 14px 52px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #ff6f91, #ff8fab);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 25px rgba(255, 105, 135, 0.6);
+    transition: 0.3s;
+}
+
+.save-btn:hover {
+    box-shadow: 0 0 40px rgba(255, 105, 135, 0.9);
+}
+
+.edit-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 105, 135, 0.4);
+    color: #ff6f91;
+    padding: 10px 26px;
+    border-radius: 30px;
+}
+
+.edit-btn:hover {
+    background: rgba(255, 105, 135, 0.1);
+}
+
+/* ================= TEXT ================= */
+p,
+small {
+    color: rgba(74, 44, 42, 0.8) !important;
+}
+
+/* ================= FOOTER ================= */
+.profile-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -40px;
+    padding: 0 520px 70px;
+    font-size: 13px;
+    color: rgba(74, 44, 42, 0.6);
+}
+
+.profile-footer .dev-name {
+    color: #ff6f91;
+}
+
+/* ================= TOAST ================= */
+.alpha-toast {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    background: rgba(255, 240, 242, 0.95);
+    border: 1px solid rgba(255, 105, 135, 0.4);
+    color: #4a2c2a;
+    padding: 14px 22px;
+    border-radius: 14px;
+    box-shadow: 0 0 20px rgba(255, 105, 135, 0.3);
+    transform: translateX(120%);
+    opacity: 0;
+    transition: .4s ease;
+}
+
+.alpha-toast.show {
+    transform: translateX(0);
+    opacity: 1;
+}

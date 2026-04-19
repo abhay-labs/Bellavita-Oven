@@ -1,0 +1,589 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #fafafa;
+    padding: 40px;
+}
+
+.title {
+
+    text-align: center;
+
+    font-size: 40px;
+
+    color: #ec4899;
+
+    margin-bottom: 40px;
+
+}
+
+.gallery {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+
+}
+
+.gallery img {
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+
+    cursor: pointer;
+
+}
+
+.gallery img:hover {
+
+    transform: scale(1.05);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+}
+
+.card-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px 15px;
+
+}
+
+.qty-control {
+
+    display: none;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #e11d48;
+
+    color: white;
+
+    padding: 6px 10px;
+
+    border-radius: 6px;
+
+    font-weight: 600;
+
+}
+
+.qty-control button {
+
+    background: white;
+
+    border: none;
+
+    color: #e11d48;
+
+    font-weight: bold;
+
+    padding: 4px 8px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+}
+
+
+/* POPUP BACKGROUND */
+
+.popup {
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    backdrop-filter: blur(3px);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+
+}
+
+
+/* POPUP CARD */
+
+.popup-content {
+
+    background: white;
+
+    width: 420px;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+
+    animation: popupFade 0.25s ease;
+
+}
+
+
+/* IMAGE */
+
+.popup-content img {
+
+    width: 100%;
+
+    height: 320px;
+
+    object-fit: contain;
+
+    background: #f8f8f8;
+
+    padding: 10px;
+
+}
+
+
+/* CLOSE BUTTON */
+
+.close-popup {
+
+    position: absolute;
+
+    top: 14px;
+    right: 18px;
+
+    font-size: 22px;
+
+    background: white;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    cursor: pointer;
+
+}
+
+
+/* PRODUCT INFO AREA */
+
+.popup-bottom {
+
+    padding: 18px 20px 28px 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+/* PRICE */
+
+#popupPrice {
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    color: #111;
+
+}
+
+
+/* ADD BUTTON */
+
+.popup-bottom .add-btn {
+
+    background: #e11d48;
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+}
+
+
+.popup-bottom .add-btn:hover {
+
+    background: #be123c;
+
+}
+
+
+/* EXTRA SPACE (future options) */
+
+.popup-content::after {
+
+    content: "";
+
+    display: block;
+
+    height: 70px;
+
+}
+
+
+/* ANIMATION */
+
+@keyframes popupFade {
+
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+
+.popup-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 22px 25px;
+
+}
+
+.popup-bottom .qty-control {
+
+    display: none;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #e11d48;
+
+    color: white;
+
+    padding: 6px 10px;
+
+    border-radius: 6px;
+
+}
+
+.side-cart {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    background: white;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-cart.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 20px;
+    border-bottom: 1px solid #d6add0;
+}
+
+#sideCartItems {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+    padding: 12px 16px;
+
+    border: 1px solid #eee;
+    border-radius: 10px;
+
+    background: #fff;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cart-footer {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 10px;
+    background: rgb(226, 40, 65);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#mainContent {
+    transition: 0.3s;
+}
+
+#mainContent.shift {
+    margin-right: 350px;
+}
+
+
+.cart-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.cart-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.cart-qty {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 10px;
+}
+
+.cart-qty button {
+    width: 25px;
+    height: 25px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+}
+
+.cart-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.remove-btn {
+    border: none;
+    background: #ffe5e5;
+    color: #d60000;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.remove-btn:hover {
+    background: #ffcccc;
+}
+
+
+.cart-qty {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: #f5f5f5;
+
+    padding: 4px 8px;
+
+    border-radius: 8px;
+
+}
+
+/* quantity buttons */
+
+.cart-qty button {
+
+    width: 28px;
+    height: 28px;
+
+    border: none;
+
+    background: white;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+/* hover effect */
+
+.cart-qty button:hover {
+
+    background: #ec4899;
+
+    color: white;
+
+}
+
+/* quantity number */
+
+.cart-qty span {
+
+    min-width: 20px;
+
+    text-align: center;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+}
+
+
+/* Page soft bakery background */
+
+body {
+    background: linear-gradient(135deg, #fff8fb, #ffeef4, #fff);
+}
+
+
+/* Cart sidebar background design */
+
+.side-cart {
+
+    background: linear-gradient(180deg, #ffffff, #fff7fa);
+
+    border-left: 2px solid #ffe4ec;
+
+}
+
+
+/* Cart header color */
+
+.cart-header {
+
+    background: linear-gradient(90deg, #ec4899, #f43f5e);
+
+    color: white;
+
+    border-bottom: none;
+
+}
+
+
+/* Cart item card color */
+
+.cart-item {
+
+    background: linear-gradient(180deg, #ffffff, #fff9fb);
+
+}
+
+
+/* Quantity buttons color */
+
+.cart-qty button {
+
+    background: #fce7f3;
+
+    color: #be185d;
+
+}
+
+
+/* Quantity hover */
+
+.cart-qty button:hover {
+
+    background: #ec4899;
+
+    color: white;
+
+}
+
+
+/* Remove button */
+
+.remove-btn {
+
+    background: #ffe4e6;
+
+    color: #dc2626;
+
+}
+
+.remove-btn:hover {
+
+    background: #fecdd3;
+
+}

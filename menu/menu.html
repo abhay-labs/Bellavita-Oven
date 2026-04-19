@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BellaVita Oven Menu</title>
+
+    <link rel="stylesheet" href="menu.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="menu-container">
+
+        <h1 class="menu-title">Our Sweet Menu</h1>
+
+        <p class="menu-subtitle">
+            Freshly baked eggless delights made with love
+        </p>
+
+        <div class="search-box">
+            <input type="text" id="menuSearch" placeholder="Search items..." onkeyup="searchMenu()">
+        </div>
+
+        <div class="menu-grid">
+
+            <!-- CAKES -->
+
+            <a href="../cake/cake.html" class="menu-card">
+
+                <img src="https://tse1.mm.bing.net/th/id/OIP.HCvmn0v_rVbp_i4CbdtePwHaFU?rs=1&pid=ImgDetMain&o=7&rm=3">
+
+                <h3>Cakes</h3>
+
+                <p>Chocolate, Red Velvet, Vanilla & more</p>
+
+            </a>
+
+            <!-- PASTRIES -->
+
+            <a href="#" class="menu-card">
+
+                <img src="https://jayaramanphotography.com/wp-content/uploads/2015/06/JRD_3118-copy-1.jpg">
+
+                <h3>Pastries</h3>
+
+                <p>Mini delicious pastry treats</p>
+
+            </a>
+
+            <!-- MUFFINS -->
+
+            <a href="#" class="menu-card">
+
+                <img src="https://thumbs.dreamstime.com/z/blueberry-muffins-basket-32954037.jpg">
+
+                <h3>Muffins</h3>
+
+                <p>Chocolate chip & blueberry muffins</p>
+
+            </a>
+
+            <!-- BROWNIES -->
+
+            <a href="#" class="menu-card">
+
+                <img src="https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg">
+
+                <h3>Brownies</h3>
+
+                <p>Rich fudgy brownies</p>
+
+            </a>
+
+            <!-- COOKIES -->
+
+            <a href="#" class="menu-card">
+
+                <img src="https://i.pinimg.com/originals/90/e0/1c/90e01ca5130983f1678c1e88c4ea5036.jpg">
+
+                <h3>Cookies</h3>
+
+                <p>Choco chip & butter cookies</p>
+
+            </a>
+
+            <!-- DONUTS -->
+
+            <a href="#" class="menu-card">
+
+                <img
+                    src="https://images.pexels.com/photos/4686958/pexels-photo-4686958.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
+
+                <h3>Donuts</h3>
+
+                <p>Glazed & chocolate donuts</p>
+
+            </a>
+
+
+            <!-- ICE CREAM -->
+            <a href="#" class="menu-card">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/09a21a87910991.5dc62441c6bb2.jpg">
+                <h3>Ice Cream</h3>
+                <p>Vanilla, chocolate & strawberry scoops</p>
+            </a>
+
+            <!-- SUNDAES -->
+            <a href="#" class="menu-card">
+                <img src="https://img.freepik.com/premium-photo/photo-delicious-ice-cream-sundaes_933496-49396.jpg">
+                <h3>Sundaes</h3>
+                <p>Ice cream with chocolate toppings</p>
+            </a>
+
+            <!-- TARTS -->
+            <a href="#" class="menu-card">
+                <img
+                    src="https://img.freepik.com/premium-photo/artisanal-tart-collection-blank-white-surface-best-picture-tarts_1020697-343347.jpg">
+                <h3>Tarts</h3>
+                <p>Fruit & chocolate cream tarts</p>
+            </a>
+
+            <!-- BREADS -->
+            <a href="#" class="menu-card">
+                <img
+                    src="https://img.freepik.com/premium-photo/whole-grain-bread-kitchen-table-professional-advertising-food-photography_920594-9038.jpg">
+                <h3>Breads</h3>
+                <p>Freshly baked artisan breads</p>
+            </a>
+
+            <!-- SANDWICHES -->
+            <a href="#" class="menu-card">
+                <img src="https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg">
+                <h3>Sandwiches</h3>
+                <p>Grilled & fresh veggie sandwiches</p>
+            </a>
+
+            <!-- BAGELS -->
+            <a href="#" class="menu-card">
+                <img
+                    src="https://img.freepik.com/premium-photo/taste-temptations-immersive-bagels-photography-best-bagels-photography_1020697-14106.jpg?w=1060">
+                <h3>Bagels</h3>
+                <p>Soft bagels with cream cheese</p>
+            </a>
+
+            <!-- CHURROS -->
+            <a href="#" class="menu-card">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.LHUK3kxTNvmg0eKF8ao1rwHaE7?rs=1&pid=ImgDetMain&o=7&rm=3">
+                <h3>Churros</h3>
+                <p>Spanish fried dough with sugar</p>
+            </a>
+
+            <!-- MOUSSE -->
+            <a href="#" class="menu-card">
+                <img src="https://img.freepik.com/premium-photo/mushroom-soup_893571-19538.jpg">
+                <h3>Mousse</h3>
+                <p>Light chocolate mousse dessert</p>
+            </a>
+
+            <!-- HOT CHOCOLATE -->
+            <a href="#" class="menu-card">
+                <img src="https://img.freepik.com/premium-photo/hot-chocolate-generative-ai_563295-316.jpg">
+                <h3>Hot Chocolate</h3>
+                <p>Rich creamy hot chocolate drink</p>
+            </a>
+
+            <!-- FRUIT PARFAIT -->
+            <a href="#" class="menu-card">
+                <img src="https://img.freepik.com/premium-photo/fresh-fruit-parfait-with-berries_652136-1015.jpg">
+                <h3>Fruit Parfait</h3>
+                <p>Layers of fruits, yogurt & granola</p>
+            </a>
+
+            <!-- CHEESECAKES -->
+
+            <a href="#" class="menu-card">
+
+                <img src="https://img.freepik.com/premium-photo/sweet-cheesecake-photography_969965-5316.jpg">
+
+                <h3>Cheesecakes</h3>
+
+                <p>Strawberry & blueberry cheesecake</p>
+
+            </a>
+
+            <!-- DESSERTS -->
+
+            <a href="#" class="menu-card">
+
+                <img
+                    src="https://img.freepik.com/premium-photo/chocolate-brownie-with-vanilla-ice-cream_1004538-128.jpg">
+
+                <h3>Desserts</h3>
+
+                <p>Tiramisu & mousse desserts</p>
+
+            </a>
+
+            <!-- CROISSANTS -->
+
+            <a href="#" class="menu-card">
+
+                <img
+                    src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/croissants-on-table-mythja-photography.jpg">
+
+                <h3>Croissants</h3>
+
+                <p>Buttery French croissants</p>
+
+            </a>
+
+            <!-- CUSTOM CAKES -->
+
+            <a href="#" class="menu-card">
+
+                <img src="https://bramptoncakes.com/wp-content/uploads/2022/08/Custom-Cake-194.jpg">
+
+                <h3>Custom Cakes</h3>
+
+                <p>Birthday & celebration cakes</p>
+
+            </a>
+
+            <!-- DRINKS -->
+
+            <a href="#" class="menu-card">
+
+                <img
+                    src="https://foodphotographyacademy.co/wp-content/uploads/2018/05/Cocktail-Photography-Tips-Use-Complementary-Colours-660x990.jpg">
+
+                <h3>Beverages</h3>
+
+                <p>Coffee, cold coffee & shakes</p>
+
+            </a>
+
+            <!-- Sweets box -->
+
+            <a href="#" class="menu-card">
+
+                <img src="https://m.media-amazon.com/images/I/91BL78hLziL._SL1500_.jpg">
+
+                <h3>Sweets Boxes</h3>
+
+                <p>Cake + pastry + muffins combo</p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function searchMenu() {
+
+            let input = document.getElementById("menuSearch").value.toLowerCase();
+
+            let cards = document.querySelectorAll(".menu-card");
+
+            cards.forEach(function (card) {
+
+                let title = card.querySelector("h3").innerText.toLowerCase();
+
+                if (title.includes(input)) {
+                    card.style.display = "block";
+                }
+                else {
+                    card.style.display = "none";
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>

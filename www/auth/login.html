@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BellaVita Oven | Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+
+</head>
+
+<body class="auth-body">
+
+    <div class="bakery-bg">
+        <span>🍰</span>
+        <span>🧁</span>
+        <span>🍩</span>
+        <span>🍪</span>
+        <span>🍓</span>
+    </div>
+
+    <div class="auth-card glass">
+        <p id="loginAllError" class="corner-error">
+            Email and password required
+        </p>
+        <h2 class="auth-title">Welcome Back</h2>
+        <p class="auth-sub">Login to continue using <b>Bellavita Oven</b></p>
+
+        <!-- EMAIL -->
+        <div class="input-group">
+            <i class="bi bi-envelope"></i>
+            <input id="email" type="email" placeholder="Email" required>
+        </div>
+        <p id="emailError" class="error-text">
+            Please enter a valid email address
+        </p>
+
+
+        <!-- PASSWORD -->
+        <div class="input-group">
+            <i class="bi bi-lock"></i>
+            <input id="password" type="password" placeholder="Password" required>
+        </div>
+
+        <!-- ❌ ERROR MESSAGE (hidden by default) -->
+        <p id="loginError" class="error-text">
+            Wrong password, please try again.
+        </p>
+
+        <div class="auth-row">
+            <a href="forgot.html" class="link">Forgot password?</a>
+        </div>
+
+        <!-- LOGIN BUTTON -->
+        <button id="loginBtn" class="btn-primary">
+            Login
+        </button>
+
+        <div class="divider">OR</div>
+
+        <!-- GOOGLE LOGIN -->
+        <button id="googleBtn" class="btn-google">
+            <i class="bi bi-google"></i> Continue with Google
+        </button>
+
+        <p class="switch">
+            New user? <a href="register.html">Create account</a>
+        </p>
+    </div>
+
+    <!-- ⚠️ VERY IMPORTANT SCRIPT ORDER -->
+    <script src="auth.js"></script>
+
+</body>
+
+</html>

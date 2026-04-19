@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BellaVita Oven Checkout</title>
+
+    <link rel="stylesheet" href="checkout.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="checkout-wrapper">
+
+        <header class="checkout-header">
+
+            <h1>
+                <i class="bi bi-bag-heart-fill"></i>
+                BellaVita Oven Checkout
+            </h1>
+
+        </header>
+
+
+        <div class="checkout-container">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="checkout-left">
+
+                <div class="checkout-card address-card">
+
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <h2 class="section-title">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Delivery Address
+                        </h2>
+
+                        <button id="editAddressBtn" class="edit-address-btn">
+                            <i class="bi bi-pencil"></i> Edit
+                        </button>
+                    </div>
+
+                    <!-- LOCATION BUTTON -->
+
+                    <button class="location-btn" id="detectLocation">
+
+                        <i class="bi bi-crosshair"></i>
+
+                        <span id="locationText">Use Current Location</span>
+
+                    </button>
+
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+
+                            <label>
+                                <i class="bi bi-person"></i>
+                                Full Name *
+                            </label>
+
+                            <input id="fullname" name="fullname" type="text" placeholder="Enter your full name">
+                            <span class="error" id="fullnameError"></span>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                <i class="bi bi-telephone"></i>
+                                Phone Number *
+                            </label>
+
+                            <input id="phone" name="phone" type="text" placeholder="10 digit mobile number">
+                            <span class="error" id="phoneError"></span>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                <i class="bi bi-telephone-plus"></i>
+                                Alternate Phone
+                            </label>
+
+                            <input id="altphone" type="text" placeholder="Optional">
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                <i class="bi bi-house-door"></i>
+                                House / Flat / Building No *
+                            </label>
+
+                            <input id="house_no" type="text" placeholder="House number">
+                            <span class="error" id="houseError"></span>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                <i class="bi bi-signpost"></i>
+                                Street / Area / Locality *
+                            </label>
+
+                            <input id="address" type="text" placeholder="Street or Area">
+                            <span class="error" id="addressError"></span>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                <i class="bi bi-pin-map"></i>
+                                Landmark *
+                            </label>
+
+                            <input id="landmark" type="text" placeholder="Nearby landmark">
+                            <span class="error" id="landmarkError"></span>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                <i class="bi bi-building"></i>
+                                City *
+                            </label>
+
+                            <input id="city" type="text" placeholder="City">
+                            <span class="error" id="cityError"></span>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                <i class="bi bi-map"></i>
+                                State *
+                            </label>
+
+                            <input id="state" type="text" placeholder="State">
+                            <span class="error" id="stateError"></span>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                <i class="bi bi-mailbox"></i>
+                                Pincode *
+                            </label>
+
+                            <input id="pincode" type="text" placeholder="Postal code">
+                            <span class="error" id="pincodeError"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ADDRESS TYPE -->
+
+                    <div class="address-type">
+
+                        <label>Address Type</label>
+
+                        <div class="address-buttons">
+
+                            <button class="type-btn active">
+
+                                <i class="bi bi-house"></i>
+                                Home
+
+                            </button>
+
+                            <button class="type-btn">
+
+                                <i class="bi bi-building"></i>
+                                Work
+
+                            </button>
+
+                            <button class="type-btn">
+
+                                <i class="bi bi-geo"></i>
+                                Other
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DELIVERY NOTE -->
+
+                    <div class="input-group instructions">
+
+                        <label>
+                            <i class="bi bi-chat-dots"></i>
+                            Delivery Instructions
+                        </label>
+
+                        <textarea placeholder="Ring bell / Call before delivery / Gate code"></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="checkout-card">
+
+                    <h2>
+                        <i class="bi bi-credit-card-2-front-fill"></i>
+                        Payment Method
+                    </h2>
+
+                    <div class="payment-methods">
+
+                        <div class="payment-option active" data-method="cod">
+                            <i class="bi bi-cash-stack"></i>
+                            <span>Cash on Delivery</span>
+                        </div>
+
+                        <div class="payment-option" data-method="upi">
+                            <i class="bi bi-phone"></i>
+                            <span>UPI Payment</span>
+                        </div>
+
+                        <div class="payment-option" data-method="card">
+                            <i class="bi bi-credit-card"></i>
+                            <span>Credit / Debit Card</span>
+                        </div>
+
+                    </div>
+
+                    <!-- DYNAMIC AREA -->
+                    <div id="paymentDetails"></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="checkout-right">
+
+                <div class="checkout-card">
+
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+
+                        <h2>
+                            <i class="bi bi-receipt"></i>
+                            Order Summary
+                        </h2>
+
+                        <button class="btn btn-outline-danger btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#couponModal">
+                            🎟️ Coupon Vouchers
+                        </button>
+
+                    </div>
+
+                    <div id="orderItems"></div>
+
+
+                    <!-- 🎟️ COUPON BOX -->
+                    <div class="coupon-box">
+
+                        <input type="text" id="couponInput" placeholder="Enter coupon code">
+
+                        <button id="applyCouponBtn">Apply</button>
+
+                    </div>
+
+                    <p id="couponMsg" class="coupon-msg"></p>
+
+
+                    <div class="summary">
+
+                        <div class="summary-row">
+
+                            <span>Subtotal</span>
+
+                            <span id="subtotal">₹0</span>
+
+                        </div>
+
+                        <div class="summary-row">
+
+                            <span>Delivery</span>
+
+                            <span>₹40</span>
+
+                        </div>
+
+                        <div class="summary-row total">
+
+                            <span>Total</span>
+
+                            <span id="total">₹0</span>
+
+                        </div>
+
+                        <div id="discountRow" class="discount-row" style="display:none;">
+
+                            <span id="discountText"></span>
+
+                            <button id="removeCouponBtn" class="remove-coupon-btn">
+                                Remove
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <button type="button" class="place-order" id="placeOrderBtn">
+
+                        <i class="bi bi-check-circle-fill"></i>
+
+                        Place Order
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 🎟️ COUPON MODAL -->
+    <div class="modal fade" id="couponModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">🎟️ Available Coupons</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <!-- Coupon 1 -->
+                    <div class="coupon-card">
+                        <h6>SAVE10</h6>
+                        <p>Get 10% off on your order</p>
+                        <button class="btn btn-success btn-sm apply-btn" data-code="SAVE10">
+                            Apply
+                        </button>
+                    </div>
+
+                    <!-- Coupon 2 -->
+                    <div class="coupon-card">
+                        <h6>FLAT50</h6>
+                        <p>Flat ₹50 off on orders</p>
+                        <button class="btn btn-success btn-sm apply-btn" data-code="FLAT50">
+                            Apply
+                        </button>
+                    </div>
+
+                    <!-- Coupon 3 -->
+                    <div class="coupon-card">
+                        <h6>WELCOME20</h6>
+                        <p>Flat 20% off for new users</p>
+                        <button class="btn btn-success btn-sm apply-btn" data-code="WELCOME20">
+                            Apply
+                        </button>
+                    </div>
+
+                    <!-- Coupon 4 -->
+                    <div class="coupon-card">
+                        <h6>BIG100</h6>
+                        <p>Get ₹100 off on orders above ₹999</p>
+                        <button class="btn btn-success btn-sm apply-btn" data-code="BIG100">
+                            Apply
+                        </button>
+                    </div>
+
+                    <!-- Coupon 5 -->
+                    <div class="coupon-card">
+                        <h6>FREESHIP</h6>
+                        <p>Free delivery on your order</p>
+                        <button class="btn btn-success btn-sm apply-btn" data-code="FREESHIP">
+                            Apply
+                        </button>
+                    </div>
+
+                    <!-- Coupon 6 -->
+                    <div class="coupon-card">
+                        <h6>SWEET15</h6>
+                        <p>15% off on cakes & pastries</p>
+                        <button class="btn btn-success btn-sm apply-btn" data-code="SWEET15">
+                            Apply
+                        </button>
+                    </div>
+
+                    <!-- Coupon 7 -->
+                    <div class="coupon-card">
+                        <h6>COMBO30</h6>
+                        <p>₹30 off on combo orders</p>
+                        <button class="btn btn-success btn-sm apply-btn" data-code="COMBO30">
+                            Apply
+                        </button>
+                    </div>
+
+                    <!-- Coupon 8 -->
+                    <div class="coupon-card">
+                        <h6>MEGADEAL</h6>
+                        <p>Flat 25% off (limited time)</p>
+                        <button class="btn btn-success btn-sm apply-btn" data-code="MEGADEAL">
+                            Apply
+                        </button>
+                    </div>
+
+                    <!-- Coupon 9 -->
+                    <div class="coupon-card">
+                        <h6>CAKE50</h6>
+                        <p>₹50 off on cake orders above ₹500</p>
+                        <button class="btn btn-success btn-sm apply-btn" data-code="CAKE50">
+                            Apply
+                        </button>
+                    </div>
+
+                    <!-- Coupon 10 -->
+                    <div class="coupon-card">
+                        <h6>PARTY20</h6>
+                        <p>20% off on party orders</p>
+                        <button class="btn btn-success btn-sm apply-btn" data-code="PARTY20">
+                            Apply
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="upiModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">💸 UPI Payment</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body text-center">
+
+                    <p id="upiAmount" class="text-success fw-bold"></p>
+
+                    <input type="text" id="upiModalInput" class="form-control mb-3"
+                        placeholder="Enter UPI ID (example@upi)">
+
+                    <button class="btn btn-success w-100" onclick="saveUPI()">
+                        Save UPI
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="cardModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">💳 Card Payment</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <p id="cardAmount" class="text-primary fw-bold"></p>
+
+                    <input type="text" id="cardModalNumber" class="form-control mb-2" placeholder="Card Number">
+
+                    <input type="text" id="cardModalName" class="form-control mb-2" placeholder="Card Holder Name">
+
+                    <input type="text" id="cardModalExpiry" class="form-control mb-3" placeholder="MM/YY">
+
+                    <button class="btn btn-primary w-100" onclick="saveCard()">
+                        Save Card
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- CART EMPTY MODAL -->
+    <!-- PREMIUM CART EMPTY MODAL -->
+    <div id="cartEmptyModal" class="cart-modal">
+        <div class="cart-modal-content">
+
+            <div class="cart-icon">
+                <i class="bi bi-cart-x"></i>
+            </div>
+
+            <h2>Your Cart is Empty</h2>
+            <p>Please add some delicious cakes before placing your order.</p>
+
+            <button class="menu-btn" onclick="goToMenu()">
+                🍰 Browse Menu
+            </button>
+
+            <button class="close-btn" onclick="closeCartModal()">
+                Close
+            </button>
+
+        </div>
+    </div>
+
+
+
+    <script src="checkout.js"></script>
+
+</body>
+
+</html>

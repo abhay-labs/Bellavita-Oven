@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BellaVita Oven | Premium Eggless Bakery - Cakes, Pastries & Muffins</title>
+    <meta name="description"
+        content="BellaVita Oven is a premium homemade eggless bakery offering fresh cakes, pastries, muffins and custom celebration cakes. Order online for delicious bakery treats delivered to your doorstep.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <a href="#" class="logo" onclick="showSection('home')">
+                    <div class="logo-icon">
+                        <img src="./Bellavita_cafe/logo.png" alt="BellaVita Logo">
+                    </div>
+                    <div class="logo-text">
+                        <div class="logo-main" id="logoMain">BellaVita Oven</div>
+                        <div class="logo-plus" id="logoPlus"></div>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+
+
+                <!-- Cart and Menu -->
+                <div class="header-actions">
+
+                    <!-- CENTER MENU -->
+                    <button class="menu-btn" onclick="openMenuPage()">
+                        <i class="bi bi-grid-fill"></i>
+                        Menu
+                    </button>
+
+                    <!-- Account Button -->
+                    <div id="accountArea"></div>
+
+                    <!-- Cart Button -->
+                    <button class="header-icon-btn cart-btn" id="cartBtn">
+                        <i class="bi bi-bag-heart-fill"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i data-lucide="menu" id="menuIcon"></i>
+                        <i data-lucide="x" id="closeIcon" style="display: none;"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#" onclick="showSection('home')">Home</a>
+                <a href="#" onclick="showSection('about')">About</a>
+                <a href="#" onclick="showSection('products')">Products</a>
+                <a href="#" onclick="showSection('custom-orders')">Custom Orders</a>
+                <a href="#" onclick="showSection('testimonials')">Reviews</a>
+                <a href="#" onclick="showSection('shop')">Shop</a>
+                <a href="#" onclick="showSection('blog')">Blog</a>
+                <a href="#" onclick="showSection('contact')">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- LOCATION BAR -->
+    <div class="location-bar">
+        <div class="location-left">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>
+                <div class="location-title" id="locationText">No Location</div>
+                <div class="location-sub" id="locationName">Exact Location Required!</div>
+            </div>
+        </div>
+
+        <button class="detect-location-btn" onclick="openSavedAddress()">
+            Detect Location
+        </button>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero page-section">
+
+
+            <!-- ================= OFFERS SECTION ================= -->
+
+            <div class="offers-section">
+
+                <h2 class="section-heading offers-heading">Offers for you</h2>
+
+                <div class="hero-offers">
+
+                    <!-- OFFER 1 -->
+                    <div class="offer-card blue" onclick="openOfferBottom('Get ₹100 Off','SAVE100','offer1')">
+                        <div class="offer-left">
+                            <div class="offer-icon">
+                                <i class="bi bi-percent"></i>
+                            </div>
+                            <div class="offer-text">
+                                <h3>Get ₹100 Off</h3>
+                                <p>On orders above ₹499</p>
+                            </div>
+                        </div>
+                        <button class="offer-btn" id="offer1">View</button>
+                    </div>
+
+                    <!-- OFFER 2 -->
+                    <div class="offer-card orange" onclick="openOfferBottom('Free Pastry','PASTRY','offer2')">
+                        <div class="offer-left">
+                            <div class="offer-icon">
+                                <i class="bi bi-gift"></i>
+                            </div>
+                            <div class="offer-text">
+                                <h3>Free Pastry</h3>
+                                <p>On orders above ₹799</p>
+                            </div>
+                        </div>
+                        <button class="offer-btn" id="offer2">View</button>
+                    </div>
+
+
+                    <!-- OFFER 3 -->
+                    <div class="offer-card green" onclick="openOfferBottom('Get ₹175 Off','SAVE175','offer3')">
+                        <div class="offer-left">
+                            <div class="offer-icon">
+                                <i class="bi bi-tag-fill"></i>
+                            </div>
+                            <div class="offer-text">
+                                <h3>Get ₹175 Off</h3>
+                                <p>On orders above ₹999</p>
+                            </div>
+                        </div>
+                        <button class="offer-btn" id="offer3">View</button>
+                    </div>
+
+                    <!-- OFFER 4 -->
+                    <div class="offer-card pink" onclick="openOfferBottom('Get ₹30 Off','GET30','offer4')">
+                        <div class="offer-left">
+                            <div class="offer-icon">
+                                <i class="bi bi-stars"></i>
+                            </div>
+                            <div class="offer-text">
+                                <h3>Get ₹30 Off</h3>
+                                <p>On orders above ₹199</p>
+                            </div>
+                        </div>
+                        <button class="offer-btn" id="offer4">View</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO CATEGORIES -->
+            <div class="hero-categories">
+
+                <h1 class="hero-category-title">What are you craving for ?</h1>
+
+                <div class="hero-category-row">
+
+                    <div class="hero-category">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.HCvmn0v_rVbp_i4CbdtePwHaFU?rs=1&pid=ImgDetMain&o=7&rm=3"
+                            loading="lazy">
+                        <p>Cakes</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://jayaramanphotography.com/wp-content/uploads/2015/06/JRD_3118-copy-1.jpg"
+                            loading="lazy">
+                        <p>Pastries</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://thumbs.dreamstime.com/z/blueberry-muffins-basket-32954037.jpg" loading="lazy">
+                        <p>Muffins</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg" loading="lazy">
+                        <p>Brownies</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://i.pinimg.com/originals/90/e0/1c/90e01ca5130983f1678c1e88c4ea5036.jpg"
+                            loading="lazy">
+                        <p>Cookies</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://images.pexels.com/photos/4686958/pexels-photo-4686958.jpeg" loading="lazy">
+                        <p>Donuts</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/09a21a87910991.5dc62441c6bb2.jpg"
+                            loading="lazy">
+                        <p>Ice Cream</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://img.freepik.com/premium-photo/photo-delicious-ice-cream-sundaes_933496-49396.jpg"
+                            loading="lazy">
+                        <p>Sundaes</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://img.freepik.com/premium-photo/artisanal-tart-collection-blank-white-surface-best-picture-tarts_1020697-343347.jpg"
+                            loading="lazy">
+                        <p>Tarts</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://img.freepik.com/premium-photo/whole-grain-bread-kitchen-table-professional-advertising-food-photography_920594-9038.jpg"
+                            loading="lazy">
+                        <p>Breads</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg" loading="lazy">
+                        <p>Sandwiches</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://img.freepik.com/premium-photo/taste-temptations-immersive-bagels-photography-best-bagels-photography_1020697-14106.jpg"
+                            loading="lazy">
+                        <p>Bagels</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.LHUK3kxTNvmg0eKF8ao1rwHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"
+                            loading="lazy">
+                        <p>Churros</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://img.freepik.com/premium-photo/mushroom-soup_893571-19538.jpg" loading="lazy">
+                        <p>Mousse</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://img.freepik.com/premium-photo/hot-chocolate-generative-ai_563295-316.jpg"
+                            loading="lazy">
+                        <p>Hot Chocolate</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://img.freepik.com/premium-photo/fresh-fruit-parfait-with-berries_652136-1015.jpg"
+                            loading="lazy">
+                        <p>Fruit Parfait</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://img.freepik.com/premium-photo/sweet-cheesecake-photography_969965-5316.jpg"
+                            loading="lazy">
+                        <p>Cheesecakes</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://img.freepik.com/premium-photo/chocolate-brownie-with-vanilla-ice-cream_1004538-128.jpg"
+                            loading="lazy">
+                        <p>Desserts</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/croissants-on-table-mythja-photography.jpg"
+                            loading="lazy">
+                        <p>Croissants</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://bramptoncakes.com/wp-content/uploads/2022/08/Custom-Cake-194.jpg"
+                            loading="lazy">
+                        <p>Custom Cakes</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://foodphotographyacademy.co/wp-content/uploads/2018/05/Cocktail-Photography-Tips-Use-Complementary-Colours-660x990.jpg"
+                            loading="lazy">
+                        <p>Beverages</p>
+                    </div>
+
+                    <div class="hero-category">
+                        <img src="https://m.media-amazon.com/images/I/91BL78hLziL._SL1500_.jpg" loading="lazy">
+                        <p>Sweets Boxes</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= WHAT'S NEW ================= -->
+            <div class="whats-new-section">
+
+                <h2 class="section-heading">What's New</h2>
+
+                <div class="whats-new-slider">
+
+                    <!-- Card 1 -->
+                    <div class="new-card">
+                        <img src="https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg">
+                        <div class="new-card-overlay">
+                            <h3>Ferrero Rocher Cake</h3>
+                            <div class="new-card-bottom">
+                                <button
+                                    onclick="orderFromWhatsNew('Ferrero Rocher Cake',549,'https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg')">
+                                    Order Now
+                                </button>
+                                <span class="new-price">₹549</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="new-card">
+                        <img src="https://images.pexels.com/photos/1132558/pexels-photo-1132558.jpeg">
+                        <div class="new-card-overlay">
+                            <h3>Belgian Chocolate Cake</h3>
+                            <div class="new-card-bottom">
+                                <button
+                                    onclick="orderFromWhatsNew('Belgian Chocolate Cake',499,'https://images.pexels.com/photos/1132558/pexels-photo-1132558.jpeg')">
+                                    Order Now
+                                </button>
+                                <span class="new-price">₹499</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="new-card">
+                        <img src="https://i.pinimg.com/originals/33/48/42/334842db58769d255a1ee71c88d2788d.jpg">
+                        <div class="new-card-overlay">
+                            <h3>Blueberry Cheesecake</h3>
+                            <div class="new-card-bottom">
+                                <button
+                                    onclick="orderFromWhatsNew('Blueberry Cheesecake',459,'https://i.pinimg.com/originals/33/48/42/334842db58769d255a1ee71c88d2788d.jpg')">
+                                    Order Now
+                                </button>
+                                <span class="new-price">₹459</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="new-card">
+                        <img
+                            src="https://eightforestlane.com/wp-content/uploads/2024/07/Vegan-Biscoff-Cake_SQ-1-720x720.jpg">
+                        <div class="new-card-overlay">
+                            <h3>Lotus Biscoff Cake</h3>
+                            <div class="new-card-bottom">
+                                <button
+                                    onclick="orderFromWhatsNew('Lotus Biscoff Cake',599,'https://eightforestlane.com/wp-content/uploads/2024/07/Vegan-Biscoff-Cake_SQ-1-720x720.jpg')">
+                                    Order Now
+                                </button>
+                                <span class="new-price">₹599</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="new-card">
+                        <img src="https://cdn.sprinklebakes.com/media/2022/01/Kit-Kat-Cake-1.jpg">
+                        <div class="new-card-overlay">
+                            <h3>KitKat Chocolate Cake</h3>
+                            <div class="new-card-bottom">
+                                <button
+                                    onclick="orderFromWhatsNew('KitKat Chocolate Cake',529,'https://cdn.sprinklebakes.com/media/2022/01/Kit-Kat-Cake-1.jpg')">
+                                    Order Now
+                                </button>
+                                <span class="new-price">₹529</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="new-card">
+                        <img
+                            src="https://i.etsystatic.com/48059243/r/il/629504/6708601481/il_794xN.6708601481_7aze.jpg">
+                        <div class="new-card-overlay">
+                            <h3>Butterscotch Crunch Cake</h3>
+                            <div class="new-card-bottom">
+                                <button
+                                    onclick="orderFromWhatsNew('Butterscotch Crunch Cake',479,'https://i.etsystatic.com/48059243/r/il/629504/6708601481/il_794xN.6708601481_7aze.jpg')">
+                                    Order Now
+                                </button>
+                                <span class="new-price">₹479</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="new-card">
+                        <img
+                            src="https://static-assets-prod.fnp.com/images/pr/l/v20221118185206/cream-drop-caramel-cake-half-kg-eggless_1.jpg">
+                        <div class="new-card-overlay">
+                            <h3>Caramel Drip Cake</h3>
+                            <div class="new-card-bottom">
+                                <button
+                                    onclick="orderFromWhatsNew('Caramel Drip Cake',489,'https://static-assets-prod.fnp.com/images/pr/l/v20221118185206/cream-drop-caramel-cake-half-kg-eggless_1.jpg')">
+                                    Order Now
+                                </button>
+                                <span class="new-price">₹489</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="new-card">
+                        <img src="https://img.freepik.com/premium-photo/realistic-donuts-box-holded_198067-390123.jpg">
+                        <div class="new-card-overlay">
+                            <h3>Chocolate Donut Box</h3>
+                            <div class="new-card-bottom">
+                                <button
+                                    onclick="orderFromWhatsNew('Chocolate Donut Box',299,'https://img.freepik.com/premium-photo/realistic-donuts-box-holded_198067-390123.jpg')">
+                                    Order Now
+                                </button>
+                                <span class="new-price">₹299</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div class="new-card">
+                        <img
+                            src="https://pakoro.com/wp-content/uploads/2024/12/Elegant-macaron-packaging-1024x796.webp">
+                        <div class="new-card-overlay">
+                            <h3>Macarons Box</h3>
+                            <div class="new-card-bottom">
+                                <button
+                                    onclick="orderFromWhatsNew('Macarons Box',399,'https://pakoro.com/wp-content/uploads/2024/12/Elegant-macaron-packaging-1024x796.webp')">
+                                    Order Now
+                                </button>
+                                <span class="new-price">₹399</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 10 -->
+                    <div class="new-card">
+                        <img
+                            src="https://www.rachaelskitchen.co.uk/wp-content/uploads/Birthday-Cupcakes-Pink-Gluten-Free-12-Box.jpg">
+                        <div class="new-card-overlay">
+                            <h3>Premium Cupcake Box</h3>
+                            <div class="new-card-bottom">
+                                <button
+                                    onclick="orderFromWhatsNew('Premium Cupcake Box',349,'https://www.rachaelskitchen.co.uk/wp-content/uploads/Birthday-Cupcakes-Pink-Gluten-Free-12-Box.jpg')">
+                                    Order Now
+                                </button>
+                                <span class="new-price">₹349</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= COMBO DEALS ================= -->
+            <!-- ================= COMBO DEALS ================= -->
+            <div class="combo-section">
+
+                <h2 class="section-heading">Combo Deals</h2>
+
+                <div class="combo-container">
+
+                    <!-- Combo 1 -->
+                    <div class="combo-card">
+                        <div class="combo-badge">SAVE 20%</div>
+                        <img src="https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg">
+                        <div class="combo-info">
+                            <h3>Cake + Pastry Combo</h3>
+                            <p>Chocolate Cake + 2 Pastries</p>
+                            <div class="combo-bottom">
+                                <button onclick="orderFromWhatsNew(
+                        'Cake + Pastry Combo',
+                        699,
+                        'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg',
+                        'Chocolate Cake + 2 Pastries'
+                    )">
+                                    Order Combo
+                                </button>
+                                <span class="combo-price">₹699</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Combo 2 -->
+                    <div class="combo-card">
+                        <div class="combo-badge">BEST SELLER</div>
+                        <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg">
+                        <div class="combo-info">
+                            <h3>Birthday Combo</h3>
+                            <p>Cake + Candles + Greeting Card</p>
+                            <div class="combo-bottom">
+                                <button onclick="orderFromWhatsNew(
+                        'Birthday Combo',
+                        899,
+                        'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg',
+                        'Cake + Candles + Greeting Card'
+                    )">
+                                    Order Combo
+                                </button>
+                                <span class="combo-price">₹899</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Combo 3 -->
+                    <div class="combo-card">
+                        <div class="combo-badge">PARTY PACK</div>
+                        <img src="https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg">
+                        <div class="combo-info">
+                            <h3>Party Dessert Box</h3>
+                            <p>Pastries + Donuts + Cupcakes</p>
+                            <div class="combo-bottom">
+                                <button onclick="orderFromWhatsNew(
+                        'Party Dessert Box',
+                        999,
+                        'https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg',
+                        'Pastries + Donuts + Cupcakes'
+                    )">
+                                    Order Combo
+                                </button>
+                                <span class="combo-price">₹999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Combo 4 -->
+                    <div class="combo-card">
+                        <div class="combo-badge">SPECIAL</div>
+                        <img src="https://images.pexels.com/photos/1132558/pexels-photo-1132558.jpeg">
+                        <div class="combo-info">
+                            <h3>Chocolate Lover Combo</h3>
+                            <p>Chocolate Cake + Brownies</p>
+                            <div class="combo-bottom">
+                                <button onclick="orderFromWhatsNew(
+                        'Chocolate Lover Combo',
+                        799,
+                        'https://images.pexels.com/photos/1132558/pexels-photo-1132558.jpeg',
+                        'Chocolate Cake + Brownies'
+                    )">
+                                    Order Combo
+                                </button>
+                                <span class="combo-price">₹799</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Combo 5 -->
+                    <div class="combo-card">
+                        <div class="combo-badge">NEW</div>
+                        <img src="https://i.pinimg.com/originals/5b/36/ad/5b36ad9220c041fb180f4e269f89bdc6.jpg">
+                        <div class="combo-info">
+                            <h3>Donut Party Combo</h3>
+                            <p>6 Donuts + Chocolate Dip</p>
+                            <div class="combo-bottom">
+                                <button onclick="orderFromWhatsNew(
+                        'Donut Party Combo',
+                        499,
+                        'https://i.pinimg.com/originals/5b/36/ad/5b36ad9220c041fb180f4e269f89bdc6.jpg',
+                        '6 Donuts + Chocolate Dip'
+                    )">
+                                    Order Combo
+                                </button>
+                                <span class="combo-price">₹499</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Combo 6 -->
+                    <div class="combo-card">
+                        <div class="combo-badge">SPECIAL</div>
+                        <img src="https://images.pexels.com/photos/3026804/pexels-photo-3026804.jpeg">
+                        <div class="combo-info">
+                            <h3>Cupcake Celebration Box</h3>
+                            <p>6 Premium Cupcakes</p>
+                            <div class="combo-bottom">
+                                <button onclick="orderFromWhatsNew(
+                        'Cupcake Celebration Box',
+                        549,
+                        'https://images.pexels.com/photos/3026804/pexels-photo-3026804.jpeg',
+                        '6 Premium Cupcakes'
+                    )">
+                                    Order Combo
+                                </button>
+                                <span class="combo-price">₹549</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Combo 7 -->
+                    <div class="combo-card">
+                        <div class="combo-badge">FAMILY PACK</div>
+                        <img src="https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg">
+                        <div class="combo-info">
+                            <h3>Family Sweet Box</h3>
+                            <p>Cake + Muffins + Cookies</p>
+                            <div class="combo-bottom">
+                                <button onclick="orderFromWhatsNew(
+                'Family Sweet Box',
+                1099,
+                'https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg',
+                'Cake + Muffins + Cookies'
+            )">
+                                    Order Combo
+                                </button>
+                                <span class="combo-price">₹1099</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Combo 8 -->
+                    <div class="combo-card">
+                        <div class="combo-badge">DATE SPECIAL</div>
+                        <img src="https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg">
+                        <div class="combo-info">
+                            <h3>Couple Dessert Combo</h3>
+                            <p>2 Pastries + Brownie + Ice Cream</p>
+                            <div class="combo-bottom">
+                                <button onclick="orderFromWhatsNew(
+                'Couple Dessert Combo',
+                599,
+                'https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg',
+                '2 Pastries + Brownie + Ice Cream'
+            )">
+                                    Order Combo
+                                </button>
+                                <span class="combo-price">₹599</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Combo 9 -->
+                    <div class="combo-card">
+                        <div class="combo-badge">KIDS SPECIAL</div>
+                        <img src="https://images.pexels.com/photos/621076/pexels-photo-621076.jpeg">
+                        <div class="combo-info">
+                            <h3>Kids Party Combo</h3>
+                            <p>Cupcakes + Donuts + Chocolates</p>
+                            <div class="combo-bottom">
+                                <button onclick="orderFromWhatsNew(
+                'Kids Party Combo',
+                699,
+                'https://images.pexels.com/photos/621076/pexels-photo-621076.jpeg',
+                'Cupcakes + Donuts + Chocolates'
+            )">
+                                    Order Combo
+                                </button>
+                                <span class="combo-price">₹699</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Combo 10 -->
+                    <div class="combo-card">
+                        <div class="combo-badge">PREMIUM</div>
+                        <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg">
+                        <div class="combo-info">
+                            <h3>Premium Celebration Combo</h3>
+                            <p>Designer Cake + Candles + Card</p>
+                            <div class="combo-bottom">
+                                <button onclick="orderFromWhatsNew(
+                'Premium Celebration Combo',
+                1299,
+                'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg',
+                'Designer Cake + Candles + Card'
+            )">
+                                    Order Combo
+                                </button>
+                                <span class="combo-price">₹1299</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- ================= TOP 10 BESTSELLERS ================= -->
+            <div class="dominos-bestseller">
+
+                <!-- Header -->
+                <div class="dominos-header">
+
+                    <div class="crown-row">
+                        <div class="line"></div>
+
+                        <!-- SVG Crown -->
+                        <svg class="crown-icon" viewBox="0 0 24 24">
+                            <path d="M2 18 L5 8 L10 13 L14 6 L19 13 L22 8 L20 18 Z"></path>
+                        </svg>
+
+                        <div class="line"></div>
+                    </div>
+
+                    <h2>Top 10 Bestsellers</h2>
+
+                    <div class="location-row">
+                        📍 In Your Locality
+                    </div>
+
+                </div>
+
+                <!-- Slider -->
+                <div class="dominos-slider">
+
+                    <!-- Card 1 -->
+                    <div class="dominos-card">
+                        <img
+                            src="https://static-assets-prod.fnp.com/images/pr/l/v20221214202732/ferrero-rocher-truffle-cake-1-kg_1.jpg">
+                        <div class="dominos-badge">TOP 10</div>
+                        <div class="dominos-overlay">
+                            <h3>Ferrero Rocher Cake</h3>
+                            <p>Chocolate Hazelnut Premium Cake</p>
+                            <div class="dominos-bottom">
+                                <div>
+                                    <div class="price">₹549</div>
+                                    <div class="size">Regular | Eggless</div>
+                                </div>
+                                <button onclick="orderFromWhatsNew(
+                                    'Ferrero Rocher Cake',
+                                    549,
+                                    'https://static-assets-prod.fnp.com/images/pr/l/v20221214202732/ferrero-rocher-truffle-cake-1-kg_1.jpg'
+                                )">
+                                    Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="dominos-card">
+                        <img src="https://i.pinimg.com/originals/65/f2/6b/65f26bec7f205f319ea048977c114700.jpg">
+                        <div class="dominos-badge">TOP 10</div>
+                        <div class="dominos-overlay">
+                            <h3>Belgian Chocolate Cake</h3>
+                            <p>Rich Chocolate Layer Cake</p>
+                            <div class="dominos-bottom">
+                                <div>
+                                    <div class="price">₹499</div>
+                                    <div class="size">Regular | Eggless</div>
+                                </div>
+                                <button onclick="orderFromWhatsNew(
+                                    'Belgian Chocolate Cake',
+                                    499,
+                                    'https://i.pinimg.com/originals/65/f2/6b/65f26bec7f205f319ea048977c114700.jpg'
+                                )">
+                                    Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="dominos-card">
+                        <img
+                            src="https://static-assets-prod.fnp.com/images/pr/l/v20221205202426/blueberry-glaze-cake-1-kg_1.jpg">
+                        <div class="dominos-badge">TOP 10</div>
+                        <div class="dominos-overlay">
+                            <h3>Blueberry Cheesecake</h3>
+                            <p>Fresh Blueberry Cream Cheese</p>
+                            <div class="dominos-bottom">
+                                <div>
+                                    <div class="price">₹459</div>
+                                    <div class="size">Regular | Eggless</div>
+                                </div>
+                                <button onclick="orderFromWhatsNew(
+                                'Blueberry Cheesecake',
+                                459,
+                                'https://static-assets-prod.fnp.com/images/pr/l/v20221205202426/blueberry-glaze-cake-1-kg_1.jpg'
+                                )">Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="dominos-card">
+                        <img src="https://liliyum.com/cdn/shop/files/Biscoff_Cake_2400x.jpg?v=1722406246">
+                        <div class="dominos-badge">TOP 10</div>
+                        <div class="dominos-overlay">
+                            <h3>Lotus Biscoff Cake</h3>
+                            <p>Lotus Cream Caramel Cake</p>
+                            <div class="dominos-bottom">
+                                <div>
+                                    <div class="price">₹599</div>
+                                    <div class="size">Regular | Eggless</div>
+                                </div>
+                                <button onclick="orderFromWhatsNew(
+                                'Lotus Biscoff Cake',
+                                599,
+                                'https://liliyum.com/cdn/shop/files/Biscoff_Cake_2400x.jpg?v=1722406246'
+                                )">Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="dominos-card">
+                        <img src="https://www.sweethomecook.com/wp-content/uploads/2025/10/i9i0dlu5urploh81evsm.webp">
+                        <div class="dominos-badge">TOP 10</div>
+                        <div class="dominos-overlay">
+                            <h3>Strawberry Delight</h3>
+                            <p>Fresh Strawberry Cream Cake</p>
+                            <div class="dominos-bottom">
+                                <div>
+                                    <div class="price">₹429</div>
+                                    <div class="size">Regular | Eggless</div>
+                                </div>
+                                <button onclick="orderFromWhatsNew(
+                                'Strawberry Delight',
+                                429,
+                                'https://www.sweethomecook.com/wp-content/uploads/2025/10/i9i0dlu5urploh81evsm.webp'
+                                )">Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="dominos-card">
+                        <img src="https://i.pinimg.com/736x/7a/5c/87/7a5c8765ae98579d89158c7c708c92be.jpg">
+                        <div class="dominos-badge">TOP 10</div>
+                        <div class="dominos-overlay">
+                            <h3>KitKat Chocolate Cake</h3>
+                            <p>Chocolate KitKat Special Cake</p>
+                            <div class="dominos-bottom">
+                                <div>
+                                    <div class="price">₹529</div>
+                                    <div class="size">Regular | Eggless</div>
+                                </div>
+                                <button onclick="orderFromWhatsNew(
+                                'KitKat Chocolate Cake',
+                                529,
+                                'https://i.pinimg.com/736x/7a/5c/87/7a5c8765ae98579d89158c7c708c92be.jpg'
+                                )">Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="dominos-card">
+                        <img
+                            src="https://static-assets-prod.fnp.com/images/pr/l/v20240909174531/classic-black-forest-cake-half-kg_1.jpg">
+                        <div class="dominos-badge">TOP 10</div>
+                        <div class="dominos-overlay">
+                            <h3>Black Forest Cake</h3>
+                            <p>Classic Cherry Chocolate Cake</p>
+                            <div class="dominos-bottom">
+                                <div>
+                                    <div class="price">₹399</div>
+                                    <div class="size">Regular | Eggless</div>
+                                </div>
+                                <button onclick="orderFromWhatsNew(
+                                'Black Forest Cake',
+                                399,
+                                'https://static-assets-prod.fnp.com/images/pr/l/v20240909174531/classic-black-forest-cake-half-kg_1.jpg'
+                                )">Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="dominos-card">
+                        <img
+                            src="https://static-assets-prod.fnp.com/images/pr/l/v20210812163234/cream-red-velvet-heart-cake-1kg-eggless_1.jpg">
+                        <div class="dominos-badge">TOP 10</div>
+                        <div class="dominos-overlay">
+                            <h3>Red Velvet Cake</h3>
+                            <p>Soft Cream Cheese Cake</p>
+                            <div class="dominos-bottom">
+                                <div>
+                                    <div class="price">₹549</div>
+                                    <div class="size">Regular | Eggless</div>
+                                </div>
+                                <button onclick="orderFromWhatsNew(
+                                'Red Velvet Cake',
+                                549,
+                                'https://static-assets-prod.fnp.com/images/pr/l/v20210812163234/cream-red-velvet-heart-cake-1kg-eggless_1.jpg'
+                                )">Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div class="dominos-card">
+                        <img
+                            src="https://th.bing.com/th/id/R.606af9ddd7d50ad9fbbe47c665e61a25?rik=YnURym0uj%2bRxwg&riu=http%3a%2f%2fbakebuddy.in%2fcdn%2fshop%2fcollections%2fPremium_Chocolate_Truffle_Cake.jpg%3fv%3d1706557211&ehk=bSDXnuWQpWrD%2fy1lPAADTGIJ427dcMMADt3nJgEcXU8%3d&risl=&pid=ImgRaw&r=0">
+                        <div class="dominos-badge">TOP 10</div>
+                        <div class="dominos-overlay">
+                            <h3>Chocolate Truffle Cake</h3>
+                            <p>Dark Chocolate Premium Cake</p>
+                            <div class="dominos-bottom">
+                                <div>
+                                    <div class="price">₹479</div>
+                                    <div class="size">Regular | Eggless</div>
+                                </div>
+                                <button onclick="orderFromWhatsNew(
+                                'Chocolate Truffle Cake',
+                                479,
+                                'https://th.bing.com/th/id/R.606af9ddd7d50ad9fbbe47c665e61a25?rik=YnURym0uj%2bRxwg&riu=http%3a%2f%2fbakebuddy.in%2fcdn%2fshop%2fcollections%2fPremium_Chocolate_Truffle_Cake.jpg%3fv%3d1706557211&ehk=bSDXnuWQpWrD%2fy1lPAADTGIJ427dcMMADt3nJgEcXU8%3d&risl=&pid=ImgRaw&r=0'
+                                )">Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 10 -->
+                    <div class="dominos-card">
+                        <img
+                            src="https://static-assets-prod.fnp.com/images/pr/l/v20221130174910/crunchy-butterscotch-cake-half-kg_1.jpg">
+                        <div class="dominos-badge">TOP 10</div>
+                        <div class="dominos-overlay">
+                            <h3>Butterscotch Cake</h3>
+                            <p>Crunchy Caramel Butterscotch</p>
+                            <div class="dominos-bottom">
+                                <div>
+                                    <div class="price">₹439</div>
+                                    <div class="size">Regular | Eggless</div>
+                                </div>
+                                <button onclick="orderFromWhatsNew(
+                                'Butterscotch Cake',
+                                439,
+                                'https://static-assets-prod.fnp.com/images/pr/l/v20221130174910/crunchy-butterscotch-cake-half-kg_1.jpg'
+                                )">Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CUSTOM CAKE PREMIUM BANNER ================= -->
+            <div class="custom-cake-premium-banner">
+
+                <!-- Floating Particles -->
+                <span class="particle" style="left:10%; bottom:0;"></span>
+                <span class="particle" style="left:25%; bottom:0;"></span>
+                <span class="particle" style="left:40%; bottom:0;"></span>
+                <span class="particle" style="left:60%; bottom:0;"></span>
+                <span class="particle" style="left:80%; bottom:0;"></span>
+
+                <!-- Floating Cake Icon -->
+                <div class="cake-icon">🎂</div>
+
+                <!-- Banner Content -->
+                <div class="custom-cake-premium-content">
+                    <h2>Design Your Dream Cake 🎂</h2>
+
+                    <p>
+                        Upload Photo • Choose Flavor • Pick Size • Add Message • Select Delivery Date
+                    </p>
+
+                    <div class="cake-features">
+                        <span>🎂 100% Eggless Or Egg Cakes</span>
+                        <span>🎨 Photo Cakes</span>
+                        <span>🚚 Fast Delivery</span>
+                        <span>⭐ Premium Quality</span>
+                    </div>
+
+                    <button onclick="showSection('custom-orders')">
+                        Customize Your Cake
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- WHY CHOOSE BELLAVITA PREMIUM -->
+            <div class="why-bellavita-premium">
+
+                <div class="why-header">
+                    <h2>Why Choose BellaVita Oven</h2>
+                    <p>Premium Eggless Bakery • Freshly Baked • Fast Delivery</p>
+                </div>
+
+                <div class="why-premium-container">
+
+                    <div class="why-premium-card">
+                        <div class="why-icon-circle">🎂</div>
+                        <h3>Eggless & Egg Cakes</h3>
+                        <p>We offer both eggless and egg cakes made with premium ingredients and rich flavors.</p>
+                    </div>
+
+                    <div class="why-premium-card">
+                        <div class="why-icon-circle">🔥</div>
+                        <h3>Freshly Baked</h3>
+                        <p>Every cake is freshly baked after your order.</p>
+                    </div>
+
+                    <div class="why-premium-card">
+                        <div class="why-icon-circle">🚚</div>
+                        <h3>Fast Delivery</h3>
+                        <p>Same day delivery available in your locality.</p>
+                    </div>
+
+                    <div class="why-premium-card">
+                        <div class="why-icon-circle">🎨</div>
+                        <h3>Custom Cakes</h3>
+                        <p>We design cakes exactly how you want.</p>
+                    </div>
+
+                    <div class="why-premium-card">
+                        <div class="why-icon-circle">⭐</div>
+                        <h3>Premium Quality</h3>
+                        <p>High quality ingredients and professional baking.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-bg"></div>
+
+            <div class="floating-elements">
+                <div class="floating-element floating-1"></div>
+                <div class="floating-element floating-2"></div>
+                <div class="floating-element floating-3"></div>
+                <div class="floating-element floating-4"></div>
+
+            </div>
+
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Our <span class="gradient-text">Products</span>
+                    </h2>
+                    <p class="section-description">
+                        Discover our mouth-watering collection of freshly baked eggless treats
+                    </p>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="product-filters">
+                    <button class="filter-btn active" data-category="all">All Products</button>
+                    <button class="filter-btn" data-category="cakes">Cakes</button>
+                    <button class="filter-btn" data-category="pastries">Pastries</button>
+                    <button class="filter-btn" data-category="muffins">Muffins</button>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be populated by JavaScript -->
+                </div>
+
+                <div class="section-footer">
+                    <button class="btn btn-primary">View All Products</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Orders Section -->
+        <section id="custom-orders" class="custom-orders page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="gradient-text">Custom Orders</span>
+                    </h2>
+                    <p class="section-description">
+                        Make your special occasions even more memorable with our custom-designed cakes
+                    </p>
+                </div>
+
+                <!-- Occasions -->
+                <div class="occasions-grid">
+                    <div class="occasion-card occasion-birthday">
+                        <div class="occasion-icon">🎂</div>
+                        <h3 class="occasion-name">Birthday</h3>
+                    </div>
+                    <div class="occasion-card occasion-anniversary">
+                        <div class="occasion-icon">💕</div>
+                        <h3 class="occasion-name">Anniversary</h3>
+                    </div>
+                    <div class="occasion-card occasion-wedding">
+                        <div class="occasion-icon">👰</div>
+                        <h3 class="occasion-name">Wedding</h3>
+                    </div>
+                    <div class="occasion-card occasion-corporate">
+                        <div class="occasion-icon">🏢</div>
+                        <h3 class="occasion-name">Corporate</h3>
+                    </div>
+                    <div class="occasion-card occasion-festival">
+                        <div class="occasion-icon">🎉</div>
+                        <h3 class="occasion-name">Festival</h3>
+                    </div>
+                    <div class="occasion-card occasion-baby">
+                        <div class="occasion-icon">👶</div>
+                        <h3 class="occasion-name">Baby Shower</h3>
+                    </div>
+                </div>
+
+                <div class="custom-orders-content">
+                    <!-- Gallery -->
+                    <div class="custom-gallery">
+                        <h3 class="gallery-title">Our Custom Creations</h3>
+                        <div class="custom-cakes">
+                            <div class="custom-cake-card">
+                                <img src="https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=400"
+                                    alt="Birthday Celebration">
+                                <div class="custom-cake-info">
+                                    <h4 class="custom-cake-title">Birthday Celebration</h4>
+                                    <p class="custom-cake-description">Custom themed birthday cake with personalized
+                                        decorations</p>
+                                </div>
+                            </div>
+                            <div class="custom-cake-card">
+                                <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=400"
+                                    alt="Anniversary Special">
+                                <div class="custom-cake-info">
+                                    <h4 class="custom-cake-title">Anniversary Special</h4>
+                                    <p class="custom-cake-description">Elegant anniversary cake with romantic
+                                        decorations</p>
+                                </div>
+                            </div>
+                            <div class="custom-cake-card">
+                                <img src="https://images.pexels.com/photos/1132558/pexels-photo-1132558.jpeg?auto=compress&cs=tinysrgb&w=400"
+                                    alt="Wedding Delight">
+                                <div class="custom-cake-info">
+                                    <h4 class="custom-cake-title">Wedding Delight</h4>
+                                    <p class="custom-cake-description">Multi-tier wedding cake with intricate designs
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Process Steps -->
+                        <div class="process-card">
+                            <h3 class="process-title">How It Works</h3>
+                            <div class="process-steps">
+                                <div class="process-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4 class="step-title">Share Your Vision</h4>
+                                        <p class="step-description">Tell us about your event and design preferences</p>
+                                    </div>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4 class="step-title">Design & Quote</h4>
+                                        <p class="step-description">We'll create a design mockup and provide pricing</p>
+                                    </div>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4 class="step-title">Bake & Deliver</h4>
+                                        <p class="step-description">Fresh baking and timely delivery for your event</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order Form -->
+                    <div class="custom-order-form">
+                        <h3 class="form-title">
+                            <i data-lucide="heart"></i>
+                            Order Your Custom Cake
+                        </h3>
+
+                        <form id="customOrderForm" class="order-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" name="name" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" name="email" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Phone</label>
+                                    <input type="tel" name="phone" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Event Date</label>
+                                    <input type="date" name="eventDate" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Cake Type</label>
+                                    <select name="cakeType" class="form-input" required>
+                                        <option value="">Select type</option>
+                                        <option value="birthday">Birthday Cake</option>
+                                        <option value="anniversary">Anniversary Cake</option>
+                                        <option value="wedding">Wedding Cake</option>
+                                        <option value="corporate">Corporate Cake</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Size</label>
+                                    <select name="size" class="form-input" required>
+                                        <option value="">Select size</option>
+                                        <option value="1kg">1 kg (6-8 people)</option>
+                                        <option value="2kg">2 kg (12-15 people)</option>
+                                        <option value="3kg">3 kg (18-20 people)</option>
+                                        <option value="5kg">5 kg (25-30 people)</option>
+                                        <option value="custom">Custom Size</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Flavor Preference</label>
+                                <input type="text" name="flavor" class="form-input"
+                                    placeholder="e.g., Chocolate, Vanilla, Red Velvet">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Special Message/Design Requirements</label>
+                                <textarea name="message" class="form-textarea" rows="4"
+                                    placeholder="Describe your vision, color preferences, decorations, or any special requirements..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i data-lucide="send"></i>
+                                <span>Submit Custom Order</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        What Our <span class="gradient-text">Customers Say</span>
+                    </h2>
+                    <p class="section-description">
+                        Don't just take our word for it - hear from our delighted customers
+                    </p>
+                </div>
+
+                <!-- Stats -->
+                <div class="testimonial-stats">
+                    <div class="stat-card">
+                        <div class="stat-value">1000+</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">5000+</div>
+                        <div class="stat-label">Orders Delivered</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">500+</div>
+                        <div class="stat-label">Custom Cakes</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">99%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                </div>
+
+                <!-- Testimonials Grid -->
+                <div class="testimonials-grid" id="testimonialsGrid">
+                    <!-- Testimonials will be populated by JavaScript -->
+                </div>
+
+                <!-- Call to Action -->
+                <div class="testimonials-cta">
+                    <div class="cta-card">
+                        <h3 class="cta-title">Ready to Create Your Own Sweet Memory?</h3>
+                        <p class="cta-description">Join thousands of satisfied customers who trust OhMyGoodies for their
+                            special occasions</p>
+                        <button class="btn btn-light">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Section -->
+        <section id="shop" class="shop page-section" style="z-index: 1;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Online <span class="gradient-text">Shop</span>
+                    </h2>
+                    <p class="section-description">
+                        Order your favorite treats online and get them delivered fresh to your doorstep
+                    </p>
+                </div>
+
+                <!-- Shopping Cart Summary -->
+                <div class="cart-summary" id="cartSummary" style="display: none;">
+                    <div class="cart-info">
+                        <i data-lucide="shopping-cart"></i>
+                        <span id="cartItemCount">0 items in cart</span>
+                    </div>
+                    <div class="cart-actions">
+                        <span class="cart-total" id="cartTotal">₹0</span>
+                        <button class="btn btn-primary">Checkout</button>
+                    </div>
+                </div>
+
+                <!-- Filters and Search -->
+                <div class="shop-filters">
+                    <div class="search-box">
+                        <i data-lucide="search"></i>
+                        <input type="text" id="searchInput" placeholder="Search products..." class="search-input">
+                    </div>
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="cakes">Cakes</option>
+                        <option value="pastries">Pastries</option>
+                        <option value="muffins">Muffins</option>
+                    </select>
+                    <select id="sortFilter" class="filter-select">
+                        <option value="name">Sort by Name</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="shop-products-grid" id="shopProductsGrid">
+                    <!-- Products will be populated by JavaScript -->
+                </div>
+
+                <!-- Delivery Info -->
+                <div class="delivery-info">
+                    <div class="delivery-item">
+                        <h3 class="delivery-title">Free Delivery</h3>
+                        <p class="delivery-description">On orders above ₹500</p>
+                    </div>
+                    <div class="delivery-item">
+                        <h3 class="delivery-title">Fresh Guarantee</h3>
+                        <p class="delivery-description">Baked fresh daily</p>
+                    </div>
+                    <div class="delivery-item">
+                        <h3 class="delivery-title">Quick Delivery</h3>
+                        <p class="delivery-description">Within 2 hours</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Baking <span class="gradient-text">Blog</span>
+                    </h2>
+                    <p class="section-description">
+                        Discover baking tips, recipes, and stories from our kitchen
+                    </p>
+                </div>
+
+                <!-- Categories -->
+                <div class="blog-categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="baking-tips">Baking Tips</button>
+                    <button class="category-btn" data-category="recipes">Recipes</button>
+                    <button class="category-btn" data-category="decorating">Decorating</button>
+                    <button class="category-btn" data-category="seasonal">Seasonal</button>
+                    <button class="category-btn" data-category="behind-scenes">Behind the Scenes</button>
+                    <button class="category-btn" data-category="custom-orders">Custom Orders</button>
+                </div>
+
+                <!-- Featured Post -->
+                <div class="featured-post">
+                    <div class="featured-image">
+                        <img src="https://images.pexels.com/photos/6212472/pexels-photo-6212472.jpeg?auto=compress&cs=tinysrgb&w=400"
+                            alt="Featured post">
+                    </div>
+                    <div class="featured-content">
+                        <div class="post-meta">
+                            <span class="post-badge">Featured</span>
+                            <span class="post-category">Baking Tips</span>
+                        </div>
+                        <h3 class="post-title">The Art of Eggless Baking: Tips and Tricks</h3>
+                        <p class="post-excerpt">Discover the secrets behind creating fluffy, moist cakes without eggs.
+                            Learn about the best egg substitutes and techniques.</p>
+                        <div class="post-footer">
+                            <div class="post-info">
+                                <div class="post-author">
+                                    <i data-lucide="user"></i>
+                                    <span>Chef Priya</span>
+                                </div>
+                                <div class="post-date">
+                                    <i data-lucide="calendar"></i>
+                                    <span>Jan 15, 2024</span>
+                                </div>
+                                <div class="post-read-time">
+                                    <i data-lucide="clock"></i>
+                                    <span>5 min read</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary">
+                                <span>Read More</span>
+                                <i data-lucide="arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Posts Grid -->
+                <div class="blog-posts-grid" id="blogPostsGrid">
+                    <!-- Blog posts will be populated by JavaScript -->
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div class="newsletter-signup">
+                    <h3 class="newsletter-title">Stay Updated with Our Latest Posts</h3>
+                    <p class="newsletter-description">Get baking tips, recipes, and stories delivered to your inbox</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email address" class="newsletter-input">
+                        <button class="btn btn-light">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Frequently Asked <span class="gradient-text">Questions</span>
+                    </h2>
+                    <p class="section-description">
+                        Got questions? We've got answers! Find everything you need to know about our eggless bakery
+                        products and services.
+                    </p>
+                </div>
+
+                <!-- Quick Help Section -->
+                <div class="quick-help">
+                    <div class="help-icon">
+                        <i data-lucide="help-circle"></i>
+                    </div>
+                    <h3 class="help-title">Need Quick Help?</h3>
+                    <p class="help-description">Can't find what you're looking for? Our friendly team is here to help!
+                    </p>
+                    <div class="help-buttons">
+                        <button class="btn btn-light">📞 Call Us: +91 98765 43210</button>
+                        <button class="btn btn-light">💬 WhatsApp Chat</button>
+                    </div>
+                </div>
+
+                <!-- FAQ Items -->
+                <div class="faq-items" id="faqItems">
+                    <!-- FAQ items will be populated by JavaScript -->
+                </div>
+
+                <!-- Contact for More Questions -->
+                <div class="faq-contact">
+                    <div class="contact-card">
+                        <h3 class="contact-title">Still have questions?</h3>
+                        <p class="contact-description">We're here to help! Reach out to us and we'll get back to you as
+                            soon as possible.</p>
+                        <div class="contact-buttons">
+                            <button class="btn btn-primary">Contact Us</button>
+                            <button class="btn btn-secondary">Live Chat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Get In <span class="gradient-text">Touch</span>
+                    </h2>
+                    <p class="section-description">
+                        Have a question or want to place an order? We'd love to hear from you!
+                    </p>
+                </div>
+
+                <!-- Contact Info Cards -->
+                <div class="contact-info-grid">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <h3 class="contact-info-title">Phone</h3>
+                        <p class="contact-info-details">+91 98765 43210</p>
+                        <p class="contact-info-subtitle">Mon - Sat: 9AM - 8PM</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <h3 class="contact-info-title">Email</h3>
+                        <p class="contact-info-details">hello@bellavitaoven.com</p>
+                        <p class="contact-info-subtitle">We reply within 24 hours</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <h3 class="contact-info-title">Location</h3>
+                        <p class="contact-info-details">123 Baker Street, Mumbai</p>
+                        <p class="contact-info-subtitle">Gorakhpur, Uttar Pradesh, India - 273010</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <h3 class="contact-info-title">Working Hours</h3>
+                        <p class="contact-info-details">Mon - Sat: 9AM - 8PM</p>
+                        <p class="contact-info-subtitle">Sunday: 10AM - 6PM</p>
+                    </div>
+                </div>
+
+                <div class="contact-content">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <h3 class="form-title">Send Us a Message</h3>
+
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" name="name" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" name="email" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Phone</label>
+                                    <input type="tel" name="phone" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Subject</label>
+                                    <select name="subject" class="form-input" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="order">Order Related</option>
+                                        <option value="custom">Custom Order</option>
+                                        <option value="complaint">Complaint</option>
+                                        <option value="feedback">Feedback</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea name="message" class="form-textarea" rows="6"
+                                    placeholder="Tell us how we can help you..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i data-lucide="send"></i>
+                                <span>Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Map and Additional Info -->
+                    <div class="contact-sidebar">
+                        <!-- Map Placeholder -->
+                        <div class="map-container">
+                            <div class="map-placeholder">
+                                <i data-lucide="map-pin"></i>
+                                <p class="map-title">Interactive Map</p>
+                                <p class="map-address">123 Baker Street, Mumbai</p>
+                            </div>
+                        </div>
+
+                        <!-- Quick Contact Options -->
+                        <div class="quick-contact">
+                            <h3 class="quick-contact-title">Quick Contact</h3>
+                            <div class="quick-contact-buttons">
+                                <button class="btn btn-whatsapp">
+                                    <i data-lucide="message-circle"></i>
+                                    <span>WhatsApp Chat</span>
+                                </button>
+                                <button class="btn btn-call">
+                                    <i data-lucide="phone"></i>
+                                    <span>Call Now</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Business Hours -->
+                        <div class="business-hours">
+                            <h3 class="hours-title">Business Hours</h3>
+                            <div class="hours-list">
+                                <div class="hours-item">
+                                    <span class="hours-day">Monday - Friday</span>
+                                    <span class="hours-time">9:00 AM - 8:00 PM</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span class="hours-day">Saturday</span>
+                                    <span class="hours-time">9:00 AM - 8:00 PM</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span class="hours-day">Sunday</span>
+                                    <span class="hours-time">10:00 AM - 6:00 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Contact -->
+                <div class="emergency-contact">
+                    <h3 class="emergency-title">Need Urgent Help?</h3>
+                    <p class="emergency-description">For urgent orders or time-sensitive inquiries, call us directly</p>
+                    <div class="emergency-buttons">
+                        <button class="btn btn-light">📞 Emergency: +91 98765 43210</button>
+                        <button class="btn btn-light">💬 24/7 WhatsApp Support</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <i data-lucide="heart"></i>
+                        </div>
+                        <span class="footer-logo-text">BellaVita Oven</span>
+                    </div>
+                    <p class="footer-description">
+                        BellaVita Oven brings you freshly baked eggless cakes, pastries and muffins
+                        crafted with love and premium ingredients for every special moment.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showSection('about')" class="footer-link">About Us</a></li>
+                        <li><a href="#" onclick="showSection('products')" class="footer-link">Products</a></li>
+                        <li><a href="#" onclick="showSection('custom-orders')" class="footer-link">Custom Orders</a>
+                        </li>
+                        <li><a href="#" onclick="showSection('shop')" class="footer-link">Shop</a></li>
+                        <li><a href="#" onclick="showSection('blog')" class="footer-link">Blog</a></li>
+                        <li><a href="#" onclick="showSection('contact')" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Our Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Eggless Cakes</a></li>
+                        <li><a href="#" class="footer-link">Pastries</a></li>
+                        <li><a href="#" class="footer-link">Muffins</a></li>
+                        <li><a href="#" class="footer-link">Custom Cakes</a></li>
+                        <li><a href="#" class="footer-link">Sugar-Free Options</a></li>
+                        <li><a href="#" class="footer-link">Vegan Treats</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <div>
+                                <p>123 Baker Street</p>
+                                <p>Mumbai, Maharashtra 400001</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <p>+91 98765 43210</p>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <p>hello@ohmygoodies.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="clock"></i>
+                            <div>
+                                <p>Mon-Sat: 9AM-8PM</p>
+                                <p>Sun: 10AM-6PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <div class="newsletter-content">
+                    <h3 class="newsletter-title">Stay Sweet with Our Newsletter</h3>
+                    <p class="newsletter-description">
+                        Get the latest updates on new products, special offers, and baking tips
+                    </p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email address" class="newsletter-input">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">
+                        © 2026 BellaVita Oven. All rights reserved. Made with 💕 for cake lovers.
+                    </p>
+                    <div class="footer-bottom-links">
+                        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                        <a href="#" class="footer-bottom-link">Terms of Service</a>
+                        <a href="#" class="footer-bottom-link">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data/products.js"></script>
+
+
+
+    <!-- CART SIDEBAR -->
+
+    <div id="cartSidebar" class="cart-sidebar">
+
+        <div class="cart-header">
+
+            <h2>Your Cart 🛒</h2>
+
+            <button id="closeCart">✕</button>
+
+        </div>
+
+        <div id="cartItemsSidebar"></div>
+
+        <div class="cart-footer">
+
+            <h3 id="cartTotalSidebar">Total: ₹0</h3>
+
+            <a href="../checkout/checkout.html">
+                <button class="checkout-btn">Checkout</button>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div id="cartOverlay"></div>
+
+
+    <div id="loginPopup" class="login-popup">
+        <div class="popup-box">
+
+            <!-- Close Button -->
+            <span class="popup-close" onclick="closeLoginPopup()">✕</span>
+
+            <!-- Icon -->
+            <div class="popup-icon">🔒</div>
+
+            <!-- Title -->
+            <h2>Login Required</h2>
+
+            <!-- Subtitle -->
+            <p>Login to place orders & explore delicious treats 🍰</p>
+
+            <!-- Features -->
+            <div class="popup-features">
+                <div>✔ Fast Ordering</div>
+                <div>✔ Track Orders</div>
+                <div>✔ Exclusive Offers</div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="popup-actions">
+                <a href="www/auth/login.html" class="btn btn-primary popup-login">
+                    Login Now
+                </a>
+                <button onclick="closeLoginPopup()" class="btn popup-cancel">
+                    Maybe Later
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- ================= ACCOUNT SIDEBAR ================= -->
+    <div id="accountSidebar" class="account-sidebar">
+        <div class="account-header">
+
+            <!-- LEFT SIDE -->
+            <div class="account-user-info" onclick="window.location.href='/www/auth/profile.html'"
+                style="cursor:pointer;">
+                <div class="account-avatar">
+                    <img src="https://thumbs.dreamstime.com/b/creative-illustration-default-avatar-profile-placeholder-isolated-background-art-design-grey-photo-blank-template-mockup-144855718.jpg"
+                        alt="user">
+                </div>
+
+                <div class="account-user-text">
+                    <h4 id="accountName">User Name</h4>
+                    <p id="accountEmail">user@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- CLOSE BUTTON -->
+            <button id="closeAccount" class="account-close-btn"
+                onclick="document.getElementById('accountSidebar').classList.remove('active'); document.getElementById('accountOverlay').classList.remove('active');">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+        </div>
+
+        <div class="account-content">
+
+            <!-- Subscription module -->
+            <button class="account-item plus-btn" onclick="openBellavitaPlus()">
+                <i class="bi bi-star-fill"></i>
+                <span>Bellavita Oven Plus</span>
+                <span class="plus-badge">PRO</span>
+            </button>
+
+            <!-- Order History -->
+            <button class="account-item order-history-btn" onclick="openOrderHistory()">
+                <i class="bi bi-clock-history"></i>
+                <span>Order History</span>
+            </button>
+
+
+            <!-- Navigation -->
+            <button class="account-item" onclick="showSection('about')">
+                <i class="bi bi-info-circle"></i>
+                <span>About</span>
+            </button>
+
+            <button class="account-item" onclick="openSavedAddress()">
+                <i class="bi bi-geo-alt"></i>
+                <span>Saved Address</span>
+            </button>
+
+            <button class="account-item" onclick="showSection('custom-orders')">
+                <i class="bi bi-pencil-square"></i>
+                <span>Custom Orders</span>
+            </button>
+
+            <button class="account-item" onclick="showSection('testimonials')">
+                <i class="bi bi-star"></i>
+                <span>Reviews</span>
+            </button>
+
+            <button class="account-item" onclick="showSection('shop')">
+                <i class="bi bi-cart"></i>
+                <span>Shop</span>
+            </button>
+
+            <button class="account-item" onclick="showSection('blog')">
+                <i class="bi bi-journal"></i>
+                <span>Blog</span>
+            </button>
+
+            <button class="account-item" onclick="showSection('contact')">
+                <i class="bi bi-telephone"></i>
+                <span>Contact</span>
+            </button>
+
+
+
+            <!-- ONLY LOGOUT -->
+            <button class="account-item logout-btn" onclick="logout()">
+                <i class="bi bi-box-arrow-right"></i> Logout
+            </button>
+
+        </div>
+    </div>
+
+    <!-- overlay -->
+    <div id="accountOverlay"
+        onclick="document.getElementById('accountSidebar').classList.remove('active'); this.classList.remove('active');">
+    </div>
+
+
+    <!-- ===== OFFER BOTTOM SLIDE ===== -->
+    <div id="offerBottom" class="offer-bottom">
+        <div class="offer-bottom-content">
+
+            <div class="offer-bottom-header">
+                <h3 id="offerBottomTitle">Get ₹100 Off</h3>
+                <span onclick="closeOfferBottom()">✕</span>
+            </div>
+
+            <div class="offer-bottom-body">
+                <p class="coupon-code">Coupon code: <b id="offerBottomCode">SAVE100</b></p>
+
+                <!-- APPLY LAYOUT -->
+                <div id="applyOfferLayout">
+                    <div class="offer-details">
+                        <p>• Valid on selected items</p>
+                        <p>• Cannot be combined with other offers</p>
+                        <p>• Limited time offer</p>
+                    </div>
+                </div>
+
+                <!-- REMOVE LAYOUT -->
+                <div id="removeOfferLayout" style="display:none;">
+                    <div class="remove-offer-header">
+                        ⚠ Offer Already Applied
+                    </div>
+                    <p class="remove-offer-text">
+                        This offer is already applied to your order.
+                        You can remove this offer if you want.
+                    </p>
+                </div>
+
+                <button id="applyOfferBtn" class="apply-offer-btn" onclick="applyOffer()">
+                    Apply Offer
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ===== COUPON APPLIED ANIMATION ===== -->
+    <!-- PREMIUM COUPON APPLIED -->
+    <div id="couponApplied" class="coupon-applied">
+        <div class="coupon-applied-box">
+
+            <div class="coupon-success-icon">
+                ✓
+            </div>
+
+            <h2>Coupon Applied!</h2>
+            <p>Discount applied successfully</p>
+
+            <div class="coupon-progress"></div>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

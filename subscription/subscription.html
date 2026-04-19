@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bellavita Oven Plus</title>
+    <link rel="stylesheet" href="subscription.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <button class="back-btn" onclick="goBack()">
+        <i class="bi bi-arrow-left"></i>
+    </button>
+
+    <!-- HERO -->
+
+    <section class="plus-hero">
+        <div class="hero-content">
+            <h1>Bellavita Oven Plus 👑</h1>
+            <p>Unlock Premium Cake Experience</p>
+            <button class="join-btn" onclick="scrollToPricing()">
+                Join Bellavita Plus
+            </button>
+
+        </div>
+    </section>
+
+    <!-- BENEFITS -->
+
+    <section class="container mt-5">
+        <h2 class="text-center mb-5">Premium Benefits</h2>
+
+        ```
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="bi bi-truck"></i>
+                    <h4>Free Delivery</h4>
+                    <p>Unlimited free delivery on all orders</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="bi bi-percent"></i>
+                    <h4>Exclusive Discounts</h4>
+                    <p>Up to 25% discount on cakes</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="bi bi-gift"></i>
+                    <h4>Free Birthday Cake</h4>
+                    <p>Free cake on your birthday</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="bi bi-lightning"></i>
+                    <h4>Priority Delivery</h4>
+                    <p>Get faster delivery than normal users</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="bi bi-star"></i>
+                    <h4>Exclusive Cakes</h4>
+                    <p>Premium cakes only for Plus members</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="bi bi-wallet2"></i>
+                    <h4>Cashback</h4>
+                    <p>Get cashback on every order</p>
+                </div>
+            </div>
+
+        </div>
+        ```
+
+    </section>
+
+    <!-- PRICING -->
+
+    <section class="pricing" id="pricing">
+        <h2>Choose Your Plan</h2>
+
+        ```
+        <div class="pricing-cards">
+
+            <div class="price-card">
+                <h3>Monthly</h3>
+                <h1>₹199</h1>
+                <ul>
+                    <li>Free Delivery</li>
+                    <li>10% Discount</li>
+                    <li>Priority Support</li>
+                </ul>
+                <button class="buy-btn" onclick="buyMonthly()">Buy Now</button>
+            </div>
+
+            <div class="price-card popular">
+                <span class="tag">Best Value</span>
+                <h3>Yearly</h3>
+                <h1>₹999</h1>
+                <ul>
+                    <li>Free Delivery</li>
+                    <li>25% Discount</li>
+                    <li>Free Birthday Cake</li>
+                    <li>Priority Delivery</li>
+                    <li>Cashback</li>
+                </ul>
+                <button class="buy-btn" onclick="buyYearly()">Buy Now</button>
+            </div>
+
+        </div>
+        ```
+
+    </section>
+
+    <!-- COMPARISON TABLE -->
+
+    <section class="container mt-5 mb-5">
+        <h2 class="text-center mb-4">Normal vs Bellavita Plus</h2>
+
+        ```
+        <div class="compare-box">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>Features</th>
+                        <th>Normal User</th>
+                        <th class="plus-head">Bellavita Plus 👑</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>🚚 Delivery Charges</td>
+                        <td>₹40</td>
+                        <td class="plus free">Free</td>
+                    </tr>
+                    <tr>
+                        <td>🏷 Discount</td>
+                        <td class="no">✖ No</td>
+                        <td class="plus">Up to 25%</td>
+                    </tr>
+                    <tr>
+                        <td>🎂 Birthday Cake</td>
+                        <td class="no">✖ No</td>
+                        <td class="plus free">Free</td>
+                    </tr>
+                    <tr>
+                        <td>⚡ Priority Delivery</td>
+                        <td class="no">✖ No</td>
+                        <td class="plus yes">✔ Yes</td>
+                    </tr>
+                    <tr>
+                        <td>👑 Exclusive Cakes</td>
+                        <td class="no">✖ No</td>
+                        <td class="plus yes">✔ Yes</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        ```
+
+    </section>
+
+
+    <!-- TESTIMONIALS -->
+
+    <section class="testimonials">
+        <h2>What Premium Users Say</h2>
+
+        ```
+        <div class="testimonial-cards">
+            <div class="testimonial">
+                <p>"Bellavita Plus saved my delivery charges every time!"</p>
+                <h5>Rahul</h5>
+            </div>
+
+            <div class="testimonial">
+                <p>"Discounts and free cake are amazing!"</p>
+                <h5>Priya</h5>
+            </div>
+
+            <div class="testimonial">
+                <p>"Priority delivery is very fast."</p>
+                <h5>Aman</h5>
+            </div>
+        </div>
+        ```
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="plus-hero" style="height:40vh;">
+        <div class="hero-content">
+            <h2>Join Bellavita Plus Today</h2>
+            <button class="join-btn" onclick="scrollToPricing()">
+                Subscribe Now
+            </button>
+
+        </div>
+    </section>
+
+    <script src="subscription.js"></script>
+
+</body>
+
+</html>
+

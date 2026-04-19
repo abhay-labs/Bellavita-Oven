@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bellavita Plus Yearly</title>
+    <link rel="stylesheet" href="yearly.css">
+</head>
+
+<body>
+
+    <div class="ribbon">Bellavita +</div>
+
+    <div class="premium-badge">
+        👑 VIP YEARLY MEMBER
+    </div>
+
+    <h1 class="title">Bellavita Plus Yearly</h1>
+
+    <div class="dashboard">
+
+        <!-- Benefits -->
+        <div class="premium-box">
+            <h2>Your Benefits</h2>
+            <ul>
+                <li>🚚 Free Delivery</li>
+                <li>🏷 25% Discount</li>
+                <li>⚡ Priority Delivery</li>
+                <li>🎁 Exclusive VIP Offers</li>
+            </ul>
+        </div>
+
+        <!-- Free Birthday Cake -->
+        <div class="premium-box vip-box">
+            <h2>Free Birthday Cake</h2>
+            <p>You get one free birthday cake every year.</p>
+            <p>Choose any cake up to ₹500.</p>
+        </div>
+
+        <!-- Cashback Wallet -->
+        <div class="premium-box wallet-box">
+            <h2>Cashback Wallet</h2>
+            <p>Wallet Balance: ₹250</p>
+            <p>Earn 5% cashback on every order.</p>
+        </div>
+
+        <!-- VIP Coupons -->
+        <div class="premium-box coupon-box">
+            <h2>VIP Coupons</h2>
+            <p>VIP30</p>
+            <p>YEARLY50</p>
+            <p>FREESHIP</p>
+        </div>
+
+        <!-- Exclusive Cakes -->
+        <div class="premium-box">
+            <h2>Exclusive Premium Cakes</h2>
+            <p>Access members-only premium cakes.</p>
+            <p>Special designer cakes available.</p>
+        </div>
+
+    </div>
+
+    <button class="delete-btn" onclick="confirmDelete()">
+        <i class="bi bi-x-circle"></i> Cancel Membership
+    </button>
+
+
+    <button class="home-btn" onclick="goHome()">Back to Home</button>
+
+    <script>
+        function goHome() {
+            window.location.href = "../index.html";
+        }
+    </script>
+
+
+    <!-- First Warning Popup -->
+    <div id="warningPopup" class="popup">
+        <div class="popup-box">
+            <div class="popup-icon">⚠</div>
+            <h2>Cancel Membership?</h2>
+            <p>You will lose all premium benefits.</p>
+
+            <div class="popup-actions">
+                <button onclick="secondWarning()" class="popup-btn">Continue</button>
+                <button onclick="closePopup()" class="popup-btn cancel">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Warning Popup -->
+    <div id="finalPopup" class="popup">
+        <div class="popup-box">
+            <div class="popup-icon">❗</div>
+            <h2>Final Confirmation</h2>
+            <p>This action cannot be undone.</p>
+
+            <div class="popup-actions">
+                <button onclick="thirdWarning()" class="popup-btn">Continue</button>
+                <button onclick="closePopup()" class="popup-btn cancel">Go Back</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Third Final Warning -->
+    <div id="finalConfirmPopup" class="popup">
+        <div class="popup-box">
+            <div class="popup-icon">❗</div>
+            <h2>Final Step</h2>
+            <p>Type <b>CANCEL</b> to confirm membership cancellation.</p>
+
+            <input type="text" id="cancelInput" placeholder="Type CANCEL here" class="cancel-input">
+
+            <div class="popup-actions">
+                <button onclick="finalDelete()" class="popup-btn">OK</button>
+                <button onclick="closePopup()" class="popup-btn cancel">Go Back</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function confirmDelete() {
+            document.getElementById("warningPopup").style.display = "flex";
+        }
+
+        function secondWarning() {
+            document.getElementById("warningPopup").style.display = "none";
+            document.getElementById("finalPopup").style.display = "flex";
+        }
+
+        function thirdWarning() {
+            document.getElementById("finalPopup").style.display = "none";
+            document.getElementById("finalConfirmPopup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("warningPopup").style.display = "none";
+            document.getElementById("finalPopup").style.display = "none";
+            document.getElementById("finalConfirmPopup").style.display = "none";
+        }
+
+        function finalDelete() {
+            const input = document.getElementById("cancelInput").value;
+
+            if (input === "CANCEL") {
+
+                const user = JSON.parse(localStorage.getItem("user"));
+
+                fetch("http://127.0.0.1:5000/cancel-subscription", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        email: user.email
+                    })
+                })
+                    .then(res => res.json())
+                    .then(data => {
+
+                        // Popup close
+                        document.getElementById("finalConfirmPopup").style.display = "none";
+
+                        // Optional: remove subscription from localStorage
+                        localStorage.removeItem("membership");
+
+                        // Direct redirect to home
+                        window.location.replace("../index.html");
+
+                    });
+
+            } else {
+                alert("Please type CANCEL exactly");
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>

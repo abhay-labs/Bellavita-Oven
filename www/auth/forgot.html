@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BellaVita Oven | Forgot Password</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body class="auth-body">
+
+    <div class="bakery-bg">
+        <span>🍰</span>
+        <span>🧁</span>
+        <span>🍩</span>
+        <span>🍪</span>
+        <span>🍓</span>
+    </div>
+
+    <div class="auth-card glass">
+        <i class="bi bi-arrow-left back-arrow" onclick="window.location.href='/www/auth/login.html'"></i>
+        <p class="corner-error email-only" id="forgotAllError">
+            Email required
+        </p>
+
+        <h2 class="auth-title">Forgot Password</h2>
+        <p class="auth-sub">Enter your email to receive OTP</p>
+
+        <div class="input-group">
+            <input id="email" type="email" placeholder="Email">
+        </div>
+        <p id="emailError" class="error-text">
+            Please enter a valid email address
+        </p>
+
+
+        <button id="forgotBtn" class="btn-primary">
+            Send OTP
+        </button>
+    </div>
+
+
+    <script src="auth.js"></script>
+
+</body>
+
+</html>

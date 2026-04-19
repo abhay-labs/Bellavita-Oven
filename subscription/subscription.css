@@ -1,0 +1,424 @@
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #fff5f7, #ffe4e9);
+    color: #333;
+}
+
+/* ================= HERO ================= */
+.plus-hero {
+    height: 80vh;
+    background: linear-gradient(120deg, #ff4b5c, #ff9a8b, #ffd700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.plus-hero::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    top: -200px;
+    left: -200px;
+}
+
+.plus-hero::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    bottom: -200px;
+    right: -200px;
+}
+
+.hero-content h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* JOIN BUTTON */
+.join-btn {
+    margin-top: 20px;
+    padding: 14px 35px;
+    border-radius: 40px;
+    border: none;
+    font-size: 18px;
+    background: white;
+    color: #ff4b5c;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.join-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= FEATURE CARDS ================= */
+.feature-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: 0.4s;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+.feature-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 10px 30px rgba(255, 75, 92, 0.3);
+}
+
+.feature-card i {
+    font-size: 45px;
+    color: #ff4b5c;
+    margin-bottom: 10px;
+}
+
+/* ================= PRICING ================= */
+.pricing {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.pricing h2 {
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: #ff4b5c;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.price-card {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    width: 280px;
+    transition: 0.4s;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.price-card:hover {
+    transform: scale(1.05);
+}
+
+.price-card h1 {
+    font-size: 45px;
+    color: #ff4b5c;
+}
+
+/* POPULAR CARD */
+.price-card.popular {
+    border: 3px solid gold;
+    transform: scale(1.07);
+}
+
+.tag {
+    position: absolute;
+    top: -12px;
+    right: 15px;
+    background: gold;
+    padding: 5px 12px;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+/* BUY BUTTON */
+.buy-btn {
+    background: linear-gradient(45deg, #ff4b5c, #ffd700);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+}
+
+.buy-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ================= TESTIMONIAL ================= */
+.testimonials {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    width: 300px;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+}
+
+/* ================= TABLE ================= */
+table {
+    background: white;
+}
+
+/* ================= FLOAT ANIMATION ================= */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.feature-card {
+    animation: float 4s ease-in-out infinite;
+}
+
+
+/* ================= PREMIUM TABLE ================= */
+.premium-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(120deg, #1a1a1a, #2a2a2a);
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.premium-table th {
+    background: linear-gradient(45deg, #ff4b5c, #ffd700);
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.premium-table td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+}
+
+.premium-table tr:hover {
+    background: rgba(255, 215, 0, 0.08);
+    transform: scale(1.01);
+    transition: 0.3s;
+}
+
+/* YES / NO COLORS */
+.yes {
+    color: #00e676;
+    font-weight: bold;
+}
+
+.no {
+    color: #ff5252;
+    font-weight: bold;
+}
+
+/* FREE TEXT */
+.free {
+    color: gold;
+    font-weight: bold;
+}
+
+
+/* ================= COMPARISON TABLE PREMIUM ================= */
+
+.compare-box {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: auto;
+}
+
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+/* Header */
+.compare-table thead {
+    background: linear-gradient(45deg, #ff4b5c, #ff9aa2);
+    color: white;
+}
+
+.compare-table th {
+    padding: 18px;
+    font-size: 18px;
+}
+
+/* Cells */
+.compare-table td {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+}
+
+/* Row hover */
+.compare-table tbody tr:hover {
+    background: #fff0f3;
+    transition: 0.3s;
+}
+
+/* Plus Column Highlight */
+.plus-head {
+    background: linear-gradient(45deg, #ffd700, #ffb347);
+    color: black;
+}
+
+.plus {
+    background: #fff7e6;
+    font-weight: bold;
+}
+
+/* Yes No */
+.yes {
+    color: #ff4b5c;
+    font-weight: bold;
+}
+
+.no {
+    color: #aaa;
+}
+
+/* Free Highlight */
+.free {
+    color: #ff4b81;
+    font-weight: bold;
+}
+
+/* Left column align */
+.compare-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+
+/* Back Button */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #e9e4e4;
+    color: rgb(194, 34, 34);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn:hover {
+    background: #daf19f;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* Success Popup */
+.success-box {
+    border-top: 5px solid #4CAF50;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-box {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    animation: popupShow 0.3s ease;
+}
+
+@keyframes popupShow {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.popup-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.popup-btn {
+    background: linear-gradient(45deg, #ff4b5c, #ffd700);
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Saved Addresses | BellaVita Oven</title>
+    <link rel="stylesheet" href="saved_address.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <div class="address-page">
+
+
+        <div class="back-button" onclick="goBack()">
+            <i class="bi bi-arrow-left"></i>
+        </div>
+
+        <!-- HEADER -->
+        <div class="address-header">
+            <h1><i class="bi bi-geo-alt-fill"></i> Saved Addresses</h1>
+            <p>Manage your delivery addresses easily</p>
+        </div>
+
+        <!-- ADD ADDRESS -->
+        <div class="add-address-card">
+            <h3 class="delivery-title" onclick="toggleAddressForm()" style="cursor:pointer;">
+                <i class="bi bi-geo-alt"></i> Add New Address
+                <i class="bi bi-chevron-down" id="arrowIcon"></i>
+            </h3>
+
+            <div id="addressFormSection">
+
+                <div class="address-form-grid">
+
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="name" placeholder="Enter your full name">
+                        <span class="error" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="text" id="phone" placeholder="10 digit mobile number">
+                        <span class="error" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Alternate Phone</label>
+                        <input type="text" id="altPhone" placeholder="Optional">
+                    </div>
+
+                    <div class="form-group">
+                        <label>House / Flat / Building *</label>
+                        <input type="text" id="house" placeholder="House number">
+                        <span class="error" id="houseError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Street / Area *</label>
+                        <input type="text" id="address" placeholder="Street or Area">
+                        <span class="error" id="addressError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Landmark *</label>
+                        <input type="text" id="landmark" placeholder="Nearby landmark">
+                        <span class="error" id="landmarkError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>City *</label>
+                        <input type="text" id="city" placeholder="City">
+                        <span class="error" id="cityError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>State *</label>
+                        <input type="text" id="state" placeholder="State">
+                        <span class="error" id="stateError"></span>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Pincode *</label>
+                        <input type="text" id="pincode" placeholder="Postal code">
+                        <span class="error" id="pincodeError"></span>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Address Type</label>
+                        <select id="type">
+                            <option value="Home">🏠 Home</option>
+                            <option value="Work">🏢 Work</option>
+                            <option value="Other">📍 Other</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button onclick="addAddress()" class="save-address-btn">
+                    Save Address
+                </button>
+
+            </div>
+        </div>
+
+        <!-- ADDRESS LIST -->
+        <div id="addressList" class="address-list"></div>
+
+    </div>
+
+    <script src="saved_address.js"></script>
+</body>
+
+</html>
